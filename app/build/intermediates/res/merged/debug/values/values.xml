@@ -213,8 +213,11 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">PiPorDataWebServiceAndroidPublico</string>
+    <string name="dataFimHint">Data Fim</string>
+    <string name="dataInicioHint">Data Inicio</string>
     <string name="loginHint">Login</string>
     <string name="passwordHint">password</string>
+    <string name="pesquisaHint">Pesquisar</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="usernameHint">username</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

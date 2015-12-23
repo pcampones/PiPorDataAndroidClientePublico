@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="18"
         android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -34,6 +34,11 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.pedrocampons.pipordatawebserviceandroidpublico.MetodosAnoActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category" />
+            </intent-filter>
         </activity>
     </application>
 

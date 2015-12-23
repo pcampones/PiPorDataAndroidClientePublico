@@ -20,6 +20,8 @@ import java.net.URL;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private final static String TOKEN = "token";
+    private String token;
     private final static String URL_WEBSERVICE = "http://projetointerswebservice.apphb.com/Service1.svc";
     //  private  String user = "";
     //  private  String pass ="";
@@ -81,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "POST");
 
                 httpURLConnection.setDoInput(true); //Recebe coisas do webservice?
-                httpURLConnection.setDoOutput(false); //Manda coisas para o webservice?
+               httpURLConnection.setDoOutput(false); //Manda coisas para o webservice?
 
                 httpURLConnection.connect();
                 int responseCode = httpURLConnection.getResponseCode();
@@ -89,7 +91,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (responseCode == 200) { //status OK
                     InputStream inputStream = httpURLConnection.getInputStream();
-                    String token = readStream(inputStream);
+                     token = readStream(inputStream);
+
                     return token;
 
                 } else { //Houve problemas
@@ -110,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
 
             Toast.makeText(LoginActivity.this, s, Toast.LENGTH_SHORT).show();
 
-            SharedPreferences preferences = LoginActivity.this.getPreferences(Context.MODE_PRIVATE);
+            SharedPreferences preferences = LoginActivity.this.getSharedPreferences("token",Context.MODE_PRIVATE);
             SharedPreferences.Editor edit = preferences.edit();
 
             edit.putString("token", s.replace("\"", ""));
@@ -119,6 +122,8 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Login Succecfull", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+              //  startActivityForResult(intent, 1);
+                intent.putExtra("token", token);
                 startActivityForResult(intent, 1);
 
 

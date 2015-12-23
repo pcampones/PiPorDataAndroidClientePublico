@@ -13,22 +13,23 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".MainActivity" >
             <uses-permission android:name="android.permission.INTERNET" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category" />
+                 <category android:name="android.intent.category" />
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+             <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MetodosAnoActivity" >
-        </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                  <category android:name="android.intent.category" />
+            </intent-filter>
+         </activity>
     </application>
 
 </manifest>
