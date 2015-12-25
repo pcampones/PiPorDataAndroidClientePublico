@@ -41,14 +41,18 @@ public class MainActivity extends AppCompatActivity {
         string.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metodos.setAdapter(string);
         metodos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
             @Override
+
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
                 switch (item){
+
                     case "Selecione uma opção...":
                         dataInicio.setVisibility(View.INVISIBLE);
                         dataFim.setVisibility(View.INVISIBLE);
                         break;
+
                     case "GetNumAcoesPorData":
 
                         dataInicio.setVisibility(View.VISIBLE);
