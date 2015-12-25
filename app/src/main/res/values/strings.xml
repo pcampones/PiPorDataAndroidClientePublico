@@ -6,4 +6,12 @@
     <string name="dataFimHint">Data Fim</string>
     <string name="dataInicioHint">Data Inicio</string>
     <string name="pesquisaHint">Pesquisar</string>
+    <string name="anoIniHint">Data Inicio</string>
+    <string name="anoFimHint">Data Fim</string>
+    <string-array name="SpinnerList">
+        <item>Selecione uma opção...</item>
+        <item>GetNumAcoesPorData</item>
+        <item>GetNumFuncCategoriaPorData</item>
+        <item>GetMediaFuncionarioPorData</item>
+    </string-array>
 </resources>

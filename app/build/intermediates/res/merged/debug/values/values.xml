@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="SpinnerList">
+        <item>Selecione uma opção...</item>
+        <item>GetNumAcoesPorData</item>
+        <item>GetNumFuncCategoriaPorData</item>
+        <item>GetMediaFuncionarioPorData</item>
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -212,6 +218,8 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="anoFimHint">Data Fim</string>
+    <string name="anoIniHint">Data Inicio</string>
     <string name="app_name">PiPorDataWebServiceAndroidPublico</string>
     <string name="dataFimHint">Data Fim</string>
     <string name="dataInicioHint">Data Inicio</string>
