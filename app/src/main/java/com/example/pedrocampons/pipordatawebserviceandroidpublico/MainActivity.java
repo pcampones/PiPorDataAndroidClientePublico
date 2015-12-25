@@ -83,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+//depois apaga este metodo
+    public void button_MetodosonClick() {
+
+        Intent intent = new Intent(this, MetodosAnoActivity.class);
+        intent.putExtra("token",tokenS);
+        startActivity(intent);
+
+    }
 
 
     public void button_MetodosonClick(View view) {
