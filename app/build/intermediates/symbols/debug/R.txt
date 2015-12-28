@@ -464,7 +464,6 @@ int id always 0x7f0d001b
 int id beginning 0x7f0d0018
 int id button 0x7f0d0052
 int id button2 0x7f0d0053
-int id button3 0x7f0d0054
 int id buttonPanel 0x7f0d002b
 int id cancel_action 0x7f0d005d
 int id checkbox 0x7f0d0039
@@ -478,8 +477,8 @@ int id dataInicioEditText 0x7f0d0058
 int id decor_content_parent 0x7f0d003f
 int id default_activity_button 0x7f0d0027
 int id disableHome 0x7f0d000c
-int id editText 0x7f0d0056
-int id editText2 0x7f0d0057
+int id editText 0x7f0d0055
+int id editText2 0x7f0d0056
 int id edit_query 0x7f0d0043
 int id end 0x7f0d0019
 int id end_padder 0x7f0d0068
@@ -495,6 +494,7 @@ int id line1 0x7f0d0061
 int id line3 0x7f0d0065
 int id listMode 0x7f0d0009
 int id listView 0x7f0d005b
+int id listView2 0x7f0d0057
 int id list_item 0x7f0d0028
 int id media_actions 0x7f0d005f
 int id middle 0x7f0d001a
@@ -528,7 +528,7 @@ int id showCustom 0x7f0d000f
 int id showHome 0x7f0d0010
 int id showTitle 0x7f0d0011
 int id spacer 0x7f0d002c
-int id spinner 0x7f0d0055
+int id spinner 0x7f0d0054
 int id split_action_bar 0x7f0d0007
 int id src_atop 0x7f0d0015
 int id src_in 0x7f0d0016
@@ -617,12 +617,13 @@ int string anoFimHint 0x7f060014
 int string anoIniHint 0x7f060015
 int string app_name 0x7f060016
 int string dataFimHint 0x7f060017
-int string dataInicioHint 0x7f060018
-int string loginHint 0x7f060019
-int string passwordHint 0x7f06001a
-int string pesquisaHint 0x7f06001b
+int string dataInicio2Hint 0x7f060018
+int string dataInicioHint 0x7f060019
+int string loginHint 0x7f06001a
+int string passwordHint 0x7f06001b
+int string pesquisaHint 0x7f06001c
 int string status_bar_notification_info_overflow 0x7f060013
-int string usernameHint 0x7f06001c
+int string usernameHint 0x7f06001d
 int style AlertDialog_AppCompat 0x7f09007d
 int style AlertDialog_AppCompat_Light 0x7f09007e
 int style Animation_AppCompat_Dialog 0x7f09007f

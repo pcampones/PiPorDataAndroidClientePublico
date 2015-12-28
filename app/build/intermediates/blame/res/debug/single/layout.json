@@ -68,12 +68,12 @@
         "source": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_big_media.xml"
     },
     {
-        "merged": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_view.xml"
-    },
-    {
         "merged": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_view.xml"
     },
     {
         "merged": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",

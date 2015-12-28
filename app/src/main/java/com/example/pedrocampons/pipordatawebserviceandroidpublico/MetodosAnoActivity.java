@@ -120,12 +120,12 @@ public class MetodosAnoActivity extends AppCompatActivity {
                     if (responseCode == 200) { // Status OK se tudo correr bem, a response é sempre 200
 
                         InputStream inputStream = httpURLConnection.getInputStream();
-                        String livrosEmJson = readStream(inputStream);
+                        String funcionariosEmJson = readStream(inputStream);
 
 
 
 
-                        return livrosEmJson;
+                        return funcionariosEmJson;
 
 
 
@@ -142,34 +142,34 @@ public class MetodosAnoActivity extends AppCompatActivity {
 
 
         @Override
-        protected void onPostExecute(String s) {
+        protected void onPostExecute(String funcionariosEmJson) {
 
             try {
-                super.onPostExecute(s);
-            ArrayList<Funcionario> books = new ArrayList<>();
+                super.onPostExecute(funcionariosEmJson);
+            ArrayList<Funcionario> funcionarioArrayList = new ArrayList<>();
 
 
-             JSONArray jsonBooks = new JSONArray(s);
+             JSONArray jsonFuncionariosArray = new JSONArray(funcionariosEmJson);
 
 
-            for (int i = 0; i < jsonBooks.length(); i++) {
+            for (int i = 0; i < jsonFuncionariosArray.length(); i++) {
 
-                JSONObject jsonBook = jsonBooks.getJSONObject(i);
-                int ano = jsonBook.getInt("Ano");
-                int soma1 = jsonBook.getInt("Soma1");
-                int soma2 = jsonBook.getInt("Soma2");
-                int soma3 = jsonBook.getInt("Soma3");
-                double soma = jsonBook.getDouble("Valor");
-                Funcionario book = new Funcionario(ano,soma1,soma2,soma3,soma);
+                JSONObject jsonFuncionario = jsonFuncionariosArray.getJSONObject(i);
+                int ano = jsonFuncionario.getInt("Ano");
+                int soma1 = jsonFuncionario.getInt("Soma1");
+                int soma2 = jsonFuncionario.getInt("Soma2");
+                int soma3 = jsonFuncionario.getInt("Soma3");
+                double soma = jsonFuncionario.getDouble("Valor");
+                Funcionario funcionario = new Funcionario(ano,soma1,soma2,soma3,soma);
 
-                books.add(book);
+                funcionarioArrayList.add(funcionario);
 
 
             }
-            Toast.makeText(MetodosAnoActivity.this,"Cenas : " + s, Toast.LENGTH_SHORT).show();
+            Toast.makeText(MetodosAnoActivity.this,"Cenas : " + funcionariosEmJson, Toast.LENGTH_SHORT).show();
             ListView listView = (ListView) findViewById(R.id.listView);
             ArrayAdapter<Funcionario> adapter =
-                    new ArrayAdapter<Funcionario>(MetodosAnoActivity.this, android.R.layout.simple_list_item_1, books);
+                    new ArrayAdapter<Funcionario>(MetodosAnoActivity.this, android.R.layout.simple_list_item_1, funcionarioArrayList);
 
             listView.setAdapter(adapter);
             } catch (JSONException e) {

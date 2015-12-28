@@ -8,6 +8,7 @@
     <string name="pesquisaHint">Pesquisar</string>
     <string name="anoIniHint">Data Inicio</string>
     <string name="anoFimHint">Data Fim</string>
+    <string name="dataInicio2Hint">Data Inicio</string>
     <string-array name="SpinnerList">
         <item>Selecione uma opção...</item>
         <item>GetNumAcoesPorData</item>

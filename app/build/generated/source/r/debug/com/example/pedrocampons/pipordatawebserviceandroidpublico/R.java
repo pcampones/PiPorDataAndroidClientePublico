@@ -1620,7 +1620,6 @@ containing a value of this type.
         public static final int beginning=0x7f0d0018;
         public static final int button=0x7f0d0052;
         public static final int button2=0x7f0d0053;
-        public static final int button3=0x7f0d0054;
         public static final int buttonPanel=0x7f0d002b;
         public static final int cancel_action=0x7f0d005d;
         public static final int checkbox=0x7f0d0039;
@@ -1634,8 +1633,8 @@ containing a value of this type.
         public static final int decor_content_parent=0x7f0d003f;
         public static final int default_activity_button=0x7f0d0027;
         public static final int disableHome=0x7f0d000c;
-        public static final int editText=0x7f0d0056;
-        public static final int editText2=0x7f0d0057;
+        public static final int editText=0x7f0d0055;
+        public static final int editText2=0x7f0d0056;
         public static final int edit_query=0x7f0d0043;
         public static final int end=0x7f0d0019;
         public static final int end_padder=0x7f0d0068;
@@ -1651,6 +1650,7 @@ containing a value of this type.
         public static final int line3=0x7f0d0065;
         public static final int listMode=0x7f0d0009;
         public static final int listView=0x7f0d005b;
+        public static final int listView2=0x7f0d0057;
         public static final int list_item=0x7f0d0028;
         public static final int media_actions=0x7f0d005f;
         public static final int middle=0x7f0d001a;
@@ -1684,7 +1684,7 @@ containing a value of this type.
         public static final int showHome=0x7f0d0010;
         public static final int showTitle=0x7f0d0011;
         public static final int spacer=0x7f0d002c;
-        public static final int spinner=0x7f0d0055;
+        public static final int spinner=0x7f0d0054;
         public static final int split_action_bar=0x7f0d0007;
         public static final int src_atop=0x7f0d0015;
         public static final int src_in=0x7f0d0016;
@@ -1781,12 +1781,13 @@ containing a value of this type.
         public static final int anoIniHint=0x7f060015;
         public static final int app_name=0x7f060016;
         public static final int dataFimHint=0x7f060017;
-        public static final int dataInicioHint=0x7f060018;
-        public static final int loginHint=0x7f060019;
-        public static final int passwordHint=0x7f06001a;
-        public static final int pesquisaHint=0x7f06001b;
+        public static final int dataInicio2Hint=0x7f060018;
+        public static final int dataInicioHint=0x7f060019;
+        public static final int loginHint=0x7f06001a;
+        public static final int passwordHint=0x7f06001b;
+        public static final int pesquisaHint=0x7f06001c;
         public static final int status_bar_notification_info_overflow=0x7f060013;
-        public static final int usernameHint=0x7f06001c;
+        public static final int usernameHint=0x7f06001d;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f09007d;
