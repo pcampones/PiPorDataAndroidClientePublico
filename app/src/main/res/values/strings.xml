@@ -11,8 +11,20 @@
     <string name="dataInicio2Hint">Data Inicio</string>
     <string-array name="SpinnerList">
         <item>Selecione uma opção...</item>
-        <item>GetNumAcoesPorData</item>
-        <item>GetNumFuncCategoriaPorData</item>
         <item>GetMediaFuncionarioPorData</item>
+        <item>GetNumFuncionarioPorData</item>
+        <item>GetNumFuncCategoriaPorData</item>
+        <item>GetPercentagemMedicamentosPorData</item>
+        <item>GetPercentagemPessoalPorData</item>
+        <item>GetAcoesCategoriaPorData</item>
+        <item>GetPercentagemAcoesPorData</item>
+        <item>GetMediaCamasPorData</item>
+        <item>GetRacioFuncionariosPorData</item>
+    </string-array>
+    <string-array name="SpinnerCategorias">
+        <item>Medicos</item>
+        <item>Enfermeiros</item>
+        <item>PessoalDeEnfermagem</item>
+        <item>TecnicosDiagnosticoTerapeutica</item>
     </string-array>
 </resources>

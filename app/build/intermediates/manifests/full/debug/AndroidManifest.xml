@@ -33,13 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.pedrocampons.pipordatawebserviceandroidpublico.MetodosAnoActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

@@ -17,7 +17,9 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.pedrocampons.pipordatawebserviceandroidpublico.model.Acao;
 import com.example.pedrocampons.pipordatawebserviceandroidpublico.model.Funcionario;
+import com.example.pedrocampons.pipordatawebserviceandroidpublico.model.Medicamento;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,9 +39,11 @@ public class MainActivity extends AppCompatActivity {
     private String token;
     private String tokenS;
     private Spinner metodos;
+    private Spinner cat;
     private EditText dataInicio;
     private EditText dataFim;
     private ArrayAdapter<CharSequence> string;
+    private ArrayAdapter<CharSequence> categorias;
 
     private final static String URL_WEBSERVICE = "http://projetointerswebservice.apphb.com/Service1.svc";
     private static final int REQUEST_CODE = 1;
@@ -59,8 +63,14 @@ public class MainActivity extends AppCompatActivity {
         string =  ArrayAdapter.createFromResource(this,
                 R.array.SpinnerList,
                 android.R.layout.simple_spinner_dropdown_item);
+
+        cat = (Spinner) findViewById(R.id.spinner2);
+        categorias =  ArrayAdapter.createFromResource(this,
+                R.array.SpinnerCategorias,
+                android.R.layout.simple_spinner_dropdown_item);
         string.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metodos.setAdapter(string);
+        cat.setAdapter(categorias);
         metodos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
@@ -73,21 +83,93 @@ public class MainActivity extends AppCompatActivity {
 
                         dataInicio.setEnabled(false);
                         dataFim.setEnabled(false);
+                        cat.setVisibility(View.GONE);
 
                         break;
 
-                    case "GetNumAcoesPorData":
-
-                        dataInicio.setVisibility(View.VISIBLE);
-                        dataFim.setVisibility(View.VISIBLE);
-
-
-                        break;
                     case "GetMediaFuncionarioPorData":
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
+                        cat.setVisibility(View.GONE);
                         break;
+
+                    case "GetNumFuncionarioPorData":
+
+                        dataInicio.setEnabled(true);
+                        dataFim.setEnabled(true);
+                        cat.setVisibility(View.GONE);
+
+
+                        break;
+
+                    case "GetNumFuncCategoriaPorData":
+
+                        dataInicio.setEnabled(true);
+                        dataFim.setEnabled(true);
+                        cat.setVisibility(View.VISIBLE);
+                        break;
+
+
+                    case "GetPercentagemMedicamentosPorData":
+
+                        dataInicio.setEnabled(true);
+                        dataFim.setEnabled(true);
+                        cat.setVisibility(View.GONE);
+
+
+                        break;
+
+
+                    case "GetPercentagemPessoalPorData":
+
+                        dataInicio.setEnabled(true);
+                        dataFim.setEnabled(true);
+                        cat.setVisibility(View.GONE);
+
+
+                        break;
+
+
+                    case "GetAcoesCategoriaPorData":
+
+                        dataInicio.setEnabled(true);
+                        dataFim.setEnabled(true);
+                        cat.setVisibility(View.VISIBLE);
+
+
+                        break;
+
+
+                    case "GetPercentagemAcoesPorData":
+
+                        dataInicio.setEnabled(true);
+                        dataFim.setEnabled(true);
+                        cat.setVisibility(View.VISIBLE);
+
+
+                        break;
+
+
+                    case "GetMediaCamasPorData":
+
+                        dataInicio.setEnabled(true);
+                        dataFim.setEnabled(true);
+                        cat.setVisibility(View.GONE);
+
+
+                        break;
+
+
+                    case "GetRacioFuncionariosPorData":
+
+                        dataInicio.setEnabled(true);
+                        dataFim.setEnabled(true);
+                        cat.setVisibility(View.GONE);
+
+
+                        break;
+
 
 
                 }
@@ -110,21 +192,62 @@ public class MainActivity extends AppCompatActivity {
 
         String text = metodos.getSelectedItem().toString();
 
+        switch(text){
 
-        if (text.equals("Selecione uma opção...")){
-            Toast.makeText(this,"Selecione uma opção",Toast.LENGTH_LONG).show();
+            case "Selecione uma opção...":
+                Toast.makeText(this,"Selecione uma opção",Toast.LENGTH_LONG).show();
+                break;
 
-        } else if (text.equals("GetMediaFuncionarioPorData")){
+            case "GetMediaFuncionarioPorData":
+                GetMediaFunc getMediaFunc = new GetMediaFunc();
+                getMediaFunc.execute(dataInicio.getText().toString(), dataFim.getText().toString());
+                break;
 
-                Puta puta = new Puta();
-                puta.execute(dataInicio.getText().toString(), dataFim.getText().toString());
+            case "GetNumFuncionarioPorData":
+                GetNumFunc getNumFunc = new GetNumFunc();
+                getNumFunc.execute(dataInicio.getText().toString(), dataFim.getText().toString());
+                break;
+
+            case "GetNumFuncCategoriaPorData":
+                GetNumFuncCategoria getNumFuncCat = new GetNumFuncCategoria();
+                getNumFuncCat.execute(dataInicio.getText().toString(), dataFim.getText().toString(), cat.getSelectedItem().toString());
+                break;
 
 
+            case "GetPercentagemMedicamentosPorData":
+                GetPercentagemMedicamentos getPercentagemMed = new GetPercentagemMedicamentos();
+                getPercentagemMed.execute(dataInicio.getText().toString(), dataFim.getText().toString());
+                break;
 
-        }else {
-            Toast.makeText(this,"Selecione uma opção",Toast.LENGTH_LONG).show();
 
+            case "GetPercentagemPessoalPorData":
+                GetPercentagemPessoal getPercentagemPessoal = new GetPercentagemPessoal();
+                getPercentagemPessoal.execute(dataInicio.getText().toString(), dataFim.getText().toString());
+                break;
+
+
+            case "GetAcoesCategoriaPorData":
+                GetAcoesCategoria getAcoesCategoria = new GetAcoesCategoria();
+                getAcoesCategoria.execute(dataInicio.getText().toString(), dataFim.getText().toString(), cat.getSelectedItem().toString());
+                break;
+
+            case "GetPercentagemAcoesPorData":
+                GetPerAcoesCat getPerAcoesCat = new GetPerAcoesCat();
+                getPerAcoesCat.execute(dataInicio.getText().toString(), dataFim.getText().toString(), cat.getSelectedItem().toString());
+                break;
+
+            case "GetMediaCamasPorData":
+                break;
+
+            case "GetRacioFuncionariosPorData":
+                GetRacioFuncionarios getRacioFunc = new GetRacioFuncionarios();
+                getRacioFunc.execute(dataInicio.getText().toString(), dataFim.getText().toString());
+                break;
         }
+
+
+
+
 
     }
     private String readStream(InputStream is) {
@@ -156,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private class Puta extends AsyncTask<String, Void, String> {
+    private class GetMediaFunc extends AsyncTask<String, Void, String> {
 
         @Override
         protected String doInBackground(String... params) {
@@ -221,17 +344,14 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject jsonFuncionario = jsonFuncionariosArray.getJSONObject(i);
                     int ano = jsonFuncionario.getInt("Ano");
-                    int soma1 = jsonFuncionario.getInt("Soma1");
-                    int soma2 = jsonFuncionario.getInt("Soma2");
-                    int soma3 = jsonFuncionario.getInt("Soma3");
-                    double soma = jsonFuncionario.getDouble("Valor");
-                    Funcionario funcionario = new Funcionario(ano,soma1,soma2,soma3,soma);
+                    double valor = jsonFuncionario.getDouble("Valor");
+                    Funcionario funcionario = new Funcionario(ano, valor);
 
                     funcionarioArrayList.add(funcionario);
 
 
                 }
-                Toast.makeText(MainActivity.this,"Cenas : " + s, Toast.LENGTH_SHORT).show();
+
                 ListView listView = (ListView) findViewById(R.id.listView2);
                 ArrayAdapter<Funcionario> adapter =
                         new ArrayAdapter<Funcionario>(MainActivity.this, android.R.layout.simple_list_item_1, funcionarioArrayList);
@@ -242,5 +362,604 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    private class GetNumFunc extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                // SharedPreferences preferences = MetodosAnoActivity.this.getPreferences(Context.MODE_PRIVATE);
+                //token = preferences.getString("token", null);
+
+                String url = URL_WEBSERVICE
+                        + "Rest/funcionarios?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
+
+                HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
+
+                httpURLConnection.setDoOutput(false); // manda coisas para o webservice??
+
+                httpURLConnection.setDoInput(true); // recebe coisas do webservice?? neste caso sim , recebe o token
+
+                httpURLConnection.connect();
+                int responseCode = httpURLConnection.getResponseCode();
+                Log.i("responseCode", "" + responseCode);
+
+                // Se tudo correr bem,
+
+
+                // ir buscar os livos devolvidos
+
+                if (responseCode == 200) { // Status OK se tudo correr bem, a response é sempre 200
+
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    String funcionariosEmJson = readStream(inputStream);
+
+
+
+
+                    return funcionariosEmJson;
+
+
+
+                } else { // Have Problems
+                    return "Erro: " + responseCode;
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return  "Erro : " + e.getMessage();
+            }
+        }
+
+
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            try {
+                super.onPostExecute(s);
+                ArrayList<Funcionario> funcionarioArrayList = new ArrayList<>();
+
+
+                JSONArray jsonFuncionariosArray = new JSONArray(s);
+
+
+                for (int i = 0; i < jsonFuncionariosArray.length(); i++) {
+
+                    JSONObject jsonFuncionario = jsonFuncionariosArray.getJSONObject(i);
+                    int ano = jsonFuncionario.getInt("Ano");
+                    double valor = jsonFuncionario.getDouble("Valor");
+                    Funcionario funcionario = new Funcionario(ano, valor);
+
+                    funcionarioArrayList.add(funcionario);
+
+
+                }
+
+                ListView listView = (ListView) findViewById(R.id.listView2);
+                ArrayAdapter<Funcionario> adapter =
+                        new ArrayAdapter<Funcionario>(MainActivity.this, android.R.layout.simple_list_item_1, funcionarioArrayList);
+
+                listView.setAdapter(adapter);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private class GetNumFuncCategoria extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                // SharedPreferences preferences = MetodosAnoActivity.this.getPreferences(Context.MODE_PRIVATE);
+                //token = preferences.getString("token", null);
+
+                String url = URL_WEBSERVICE
+                        + "Rest/funcionariosCategoriaS?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
+
+                HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
+
+                httpURLConnection.setDoOutput(false); // manda coisas para o webservice??
+
+                httpURLConnection.setDoInput(true); // recebe coisas do webservice?? neste caso sim , recebe o token
+
+                httpURLConnection.connect();
+                int responseCode = httpURLConnection.getResponseCode();
+                Log.i("responseCode", "" + responseCode);
+
+                // Se tudo correr bem,
+
+
+                // ir buscar os livos devolvidos
+
+                if (responseCode == 200) { // Status OK se tudo correr bem, a response é sempre 200
+
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    String funcionariosCatEmJson = readStream(inputStream);
+
+
+
+
+                    return funcionariosCatEmJson;
+
+
+
+                } else { // Have Problems
+                    return "Erro: " + responseCode;
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return  "Erro : " + e.getMessage();
+            }
+        }
+
+
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            try {
+                super.onPostExecute(s);
+                ArrayList<Funcionario> funcionarioCatArrayList = new ArrayList<>();
+
+
+                JSONArray jsonFuncionariosCatArray = new JSONArray(s);
+
+
+                for (int i = 0; i < jsonFuncionariosCatArray.length(); i++) {
+
+                    JSONObject jsonFuncionarioCat = jsonFuncionariosCatArray.getJSONObject(i);
+                    int ano = jsonFuncionarioCat.getInt("Ano");
+                    double soma1 = jsonFuncionarioCat.getDouble("Soma1");
+                    Funcionario funcionarioCat = new Funcionario(ano, soma1);
+
+                    funcionarioCatArrayList.add(funcionarioCat);
+
+
+                }
+
+                ListView listView = (ListView) findViewById(R.id.listView2);
+                ArrayAdapter<Funcionario> adapter =
+                        new ArrayAdapter<Funcionario>(MainActivity.this, android.R.layout.simple_list_item_1, funcionarioCatArrayList);
+
+                listView.setAdapter(adapter);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+
+    private class GetPercentagemMedicamentos extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                // SharedPreferences preferences = MetodosAnoActivity.this.getPreferences(Context.MODE_PRIVATE);
+                //token = preferences.getString("token", null);
+
+                String url = URL_WEBSERVICE
+                        + "Rest/percentagemMedicamentos?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
+
+                HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
+
+                httpURLConnection.setDoOutput(false); // manda coisas para o webservice??
+
+                httpURLConnection.setDoInput(true); // recebe coisas do webservice?? neste caso sim , recebe o token
+
+                httpURLConnection.connect();
+                int responseCode = httpURLConnection.getResponseCode();
+                Log.i("responseCode", "" + responseCode);
+
+                // Se tudo correr bem,
+
+
+                // ir buscar os livos devolvidos
+
+                if (responseCode == 200) { // Status OK se tudo correr bem, a response é sempre 200
+
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    String medicamentosEmJson = readStream(inputStream);
+
+
+
+
+                    return medicamentosEmJson;
+
+
+
+                } else { // Have Problems
+                    return "Erro: " + responseCode;
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return  "Erro : " + e.getMessage();
+            }
+        }
+
+
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            try {
+                super.onPostExecute(s);
+                ArrayList<Medicamento> medicamentosArrayList = new ArrayList<>();
+
+
+                JSONArray jsonMedicamentosArray = new JSONArray(s);
+
+
+                for (int i = 0; i < jsonMedicamentosArray.length(); i++) {
+
+                    JSONObject jsonMedicamento = jsonMedicamentosArray.getJSONObject(i);
+                    int ano = jsonMedicamento.getInt("Ano");
+                    double valor = jsonMedicamento.getDouble("Valor");
+                    Medicamento medicamento = new Medicamento(ano, valor);
+
+                    medicamentosArrayList.add(medicamento);
+
+
+                }
+
+                ListView listView = (ListView) findViewById(R.id.listView2);
+                ArrayAdapter<Medicamento> adapter =
+                        new ArrayAdapter<Medicamento>(MainActivity.this, android.R.layout.simple_list_item_1, medicamentosArrayList);
+
+                listView.setAdapter(adapter);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+
+    private class GetPercentagemPessoal extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                // SharedPreferences preferences = MetodosAnoActivity.this.getPreferences(Context.MODE_PRIVATE);
+                //token = preferences.getString("token", null);
+
+                String url = URL_WEBSERVICE
+                        + "Rest/percentagemPessoal?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
+
+                HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
+
+                httpURLConnection.setDoOutput(false); // manda coisas para o webservice??
+
+                httpURLConnection.setDoInput(true); // recebe coisas do webservice?? neste caso sim , recebe o token
+
+                httpURLConnection.connect();
+                int responseCode = httpURLConnection.getResponseCode();
+                Log.i("responseCode", "" + responseCode);
+
+                // Se tudo correr bem,
+
+
+                // ir buscar os livos devolvidos
+
+                if (responseCode == 200) { // Status OK se tudo correr bem, a response é sempre 200
+
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    String pessoalEmJson = readStream(inputStream);
+
+
+
+
+                    return pessoalEmJson;
+
+
+
+                } else { // Have Problems
+                    return "Erro: " + responseCode;
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return  "Erro : " + e.getMessage();
+            }
+        }
+
+
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            try {
+                super.onPostExecute(s);
+                ArrayList<Funcionario> pessoalArrayList = new ArrayList<>();
+
+
+                JSONArray jsonPessoalArray = new JSONArray(s);
+
+
+                for (int i = 0; i < jsonPessoalArray.length(); i++) {
+
+                    JSONObject jsonPessoal = jsonPessoalArray.getJSONObject(i);
+                    int ano = jsonPessoal.getInt("Ano");
+                    double valor = jsonPessoal.getDouble("Valor");
+                    Funcionario funcionario = new Funcionario(ano, valor);
+
+                    pessoalArrayList.add(funcionario);
+
+
+                }
+
+                ListView listView = (ListView) findViewById(R.id.listView2);
+                ArrayAdapter<Funcionario> adapter =
+                        new ArrayAdapter<Funcionario>(MainActivity.this, android.R.layout.simple_list_item_1, pessoalArrayList);
+
+                listView.setAdapter(adapter);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private class GetAcoesCategoria extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                // SharedPreferences preferences = MetodosAnoActivity.this.getPreferences(Context.MODE_PRIVATE);
+                //token = preferences.getString("token", null);
+
+                String url = URL_WEBSERVICE
+                        + "Rest/acoesCategoria?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
+
+                HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
+
+                httpURLConnection.setDoOutput(false); // manda coisas para o webservice??
+
+                httpURLConnection.setDoInput(true); // recebe coisas do webservice?? neste caso sim , recebe o token
+
+                httpURLConnection.connect();
+                int responseCode = httpURLConnection.getResponseCode();
+                Log.i("responseCode", "" + responseCode);
+
+                // Se tudo correr bem,
+
+
+                // ir buscar os livos devolvidos
+
+                if (responseCode == 200) { // Status OK se tudo correr bem, a response é sempre 200
+
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    String AcoesCatEmJson = readStream(inputStream);
+
+
+
+
+                    return AcoesCatEmJson;
+
+
+
+                } else { // Have Problems
+                    return "Erro: " + responseCode;
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return  "Erro : " + e.getMessage();
+            }
+        }
+
+
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            try {
+                super.onPostExecute(s);
+                ArrayList<Acao> acoesCatArrayList = new ArrayList<>();
+
+
+                JSONArray jsonAcoesCatArray = new JSONArray(s);
+
+
+                for (int i = 0; i < jsonAcoesCatArray.length(); i++) {
+
+                    JSONObject jsonAcaoCat = jsonAcoesCatArray.getJSONObject(i);
+                    int ano = jsonAcaoCat.getInt("Ano");
+                    double soma1 = jsonAcaoCat.getDouble("Soma1");
+                    Acao acaoCat = new Acao(ano, soma1);
+
+                    acoesCatArrayList.add(acaoCat);
+
+
+                }
+
+                ListView listView = (ListView) findViewById(R.id.listView2);
+                ArrayAdapter<Acao> adapter =
+                        new ArrayAdapter<Acao>(MainActivity.this, android.R.layout.simple_list_item_1, acoesCatArrayList);
+
+                listView.setAdapter(adapter);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private class GetPerAcoesCat extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                // SharedPreferences preferences = MetodosAnoActivity.this.getPreferences(Context.MODE_PRIVATE);
+                //token = preferences.getString("token", null);
+
+                String url = URL_WEBSERVICE
+                        + "Rest/percentagemAcoes?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
+
+                HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
+
+                httpURLConnection.setDoOutput(false); // manda coisas para o webservice??
+
+                httpURLConnection.setDoInput(true); // recebe coisas do webservice?? neste caso sim , recebe o token
+
+                httpURLConnection.connect();
+                int responseCode = httpURLConnection.getResponseCode();
+                Log.i("responseCode", "" + responseCode);
+
+                // Se tudo correr bem,
+
+
+                // ir buscar os livos devolvidos
+
+                if (responseCode == 200) { // Status OK se tudo correr bem, a response é sempre 200
+
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    String acoesPerEmJson = readStream(inputStream);
+
+
+
+
+                    return acoesPerEmJson;
+
+
+
+                } else { // Have Problems
+                    return "Erro: " + responseCode;
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return  "Erro : " + e.getMessage();
+            }
+        }
+
+
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            try {
+                super.onPostExecute(s);
+                ArrayList<Acao> acaoPerArrayList = new ArrayList<>();
+
+
+                JSONArray jsonAcaoPerArray = new JSONArray(s);
+
+
+                for (int i = 0; i < jsonAcaoPerArray.length(); i++) {
+
+                    JSONObject jsonAcaoPer = jsonAcaoPerArray.getJSONObject(i);
+                    int ano = jsonAcaoPer.getInt("Ano");
+                    double soma1 = jsonAcaoPer.getDouble("Soma1");
+                    Acao acaoPer = new Acao(ano, soma1);
+
+                    acaoPerArrayList.add(acaoPer);
+
+
+                }
+
+                ListView listView = (ListView) findViewById(R.id.listView2);
+                ArrayAdapter<Acao> adapter =
+                        new ArrayAdapter<Acao>(MainActivity.this, android.R.layout.simple_list_item_1, acaoPerArrayList);
+
+                listView.setAdapter(adapter);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private class GetRacioFuncionarios extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                // SharedPreferences preferences = MetodosAnoActivity.this.getPreferences(Context.MODE_PRIVATE);
+                //token = preferences.getString("token", null);
+
+                String url = URL_WEBSERVICE
+                        + "Rest/racioFuncionarios?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
+
+                HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
+
+                httpURLConnection.setDoOutput(false); // manda coisas para o webservice??
+
+                httpURLConnection.setDoInput(true); // recebe coisas do webservice?? neste caso sim , recebe o token
+
+                httpURLConnection.connect();
+                int responseCode = httpURLConnection.getResponseCode();
+                Log.i("responseCode", "" + responseCode);
+
+                // Se tudo correr bem,
+
+
+                // ir buscar os livos devolvidos
+
+                if (responseCode == 200) { // Status OK se tudo correr bem, a response é sempre 200
+
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    String funcionarioEmJson = readStream(inputStream);
+
+
+
+
+                    return funcionarioEmJson;
+
+
+
+                } else { // Have Problems
+                    return "Erro: " + responseCode;
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return  "Erro : " + e.getMessage();
+            }
+        }
+
+
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            try {
+                super.onPostExecute(s);
+                ArrayList<Funcionario> funcionarioArrayList = new ArrayList<>();
+
+
+                JSONArray jsonFuncionarioArray = new JSONArray(s);
+
+
+                for (int i = 0; i < jsonFuncionarioArray.length(); i++) {
+
+                    JSONObject jsonFuncionario = jsonFuncionarioArray.getJSONObject(i);
+                    int ano = jsonFuncionario.getInt("Ano");
+                    double valor = jsonFuncionario.getDouble("Valor");
+                    Funcionario funcionario = new Funcionario(ano, valor);
+
+                    funcionarioArrayList.add(funcionario);
+
+
+                }
+
+                ListView listView = (ListView) findViewById(R.id.listView2);
+                ArrayAdapter<Funcionario> adapter =
+                        new ArrayAdapter<Funcionario>(MainActivity.this, android.R.layout.simple_list_item_1, funcionarioArrayList);
+
+                listView.setAdapter(adapter);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+
 
 }

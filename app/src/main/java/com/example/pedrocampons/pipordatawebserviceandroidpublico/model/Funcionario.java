@@ -14,16 +14,32 @@ public class Funcionario implements Serializable{
     private double valor;
 
 
+    public Funcionario(int ano, int soma1)
+    {
 
-    public Funcionario(int ano, int soma1, int soma2, int soma3, double valor)
+        this.ano = ano;
+        this.soma1 = soma1;
+
+    }
+
+
+    public Funcionario(int ano, int soma1, int soma2, int soma3)
     {
 
         this.ano = ano;
         this.soma1 = soma1;
         this.soma2 = soma2;
         this.soma3 = soma3;
+
+    }
+
+    public Funcionario(int ano, double valor)
+    {
+
+        this.ano = ano;
         this.valor = valor;
     }
+
     @Override
     public String toString(){
         return "Funcionario{" +
