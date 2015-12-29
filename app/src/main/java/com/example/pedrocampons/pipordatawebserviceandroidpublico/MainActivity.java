@@ -111,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case "NumeroFuncionarios":
 
+                        dataInicio.setVisibility(View.VISIBLE);
+                        dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
@@ -120,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case "NumeroFuncionariosCategoria":
 
+                        dataInicio.setVisibility(View.VISIBLE);
+                        dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         acao.setVisibility(View.GONE);
@@ -129,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case "PercentagemMedicamentos":
 
+                        dataInicio.setVisibility(View.VISIBLE);
+                        dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
@@ -140,6 +146,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case "PercentagemPessoal":
 
+                        dataInicio.setVisibility(View.VISIBLE);
+                        dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
@@ -151,6 +159,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case "NumeroAcoesCategoria":
 
+                        dataInicio.setVisibility(View.VISIBLE);
+                        dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
@@ -162,6 +172,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case "PercentagemAcoesCategoria":
 
+                        dataInicio.setVisibility(View.VISIBLE);
+                        dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
@@ -172,6 +184,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case "MediaCamasHospitais":
 
+                        dataInicio.setVisibility(View.VISIBLE);
+                        dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
@@ -183,6 +197,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case "RacioFuncionariosEstabelecimentos":
 
+                        dataInicio.setVisibility(View.VISIBLE);
+                        dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
