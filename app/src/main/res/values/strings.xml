@@ -12,15 +12,15 @@
     <string name="anoFimHint2">Data Fim</string>
     <string-array name="SpinnerList">
         <item>Selecione uma opção...</item>
-        <item>GetMediaFuncionarioPorData</item>
-        <item>GetNumFuncionarioPorData</item>
-        <item>GetNumFuncCategoriaPorData</item>
-        <item>GetPercentagemMedicamentosPorData</item>
-        <item>GetPercentagemPessoalPorData</item>
-        <item>GetAcoesCategoriaPorData</item>
-        <item>GetPercentagemAcoesPorData</item>
-        <item>GetMediaCamasPorData</item>
-        <item>GetRacioFuncionariosPorData</item>
+        <item>MediaCustoFuncionario</item>
+        <item>NumeroFuncionarios</item>
+        <item>NumeroFuncionariosCategoria</item>
+        <item>PercentagemMedicamentos</item>
+        <item>PercentagemPessoal</item>
+        <item>NumeroAcoesCategoria</item>
+        <item>PercentagemAcoesCategoria</item>
+        <item>MediaCamasHospitais</item>
+        <item>RacioFuncionariosEstabelecimentos</item>
     </string-array>
     <string-array name="SpinnerCategorias">
         <item>Medicos</item>

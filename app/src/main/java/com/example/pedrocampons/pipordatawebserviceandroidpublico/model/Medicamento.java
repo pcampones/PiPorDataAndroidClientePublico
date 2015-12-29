@@ -13,6 +13,12 @@ public class Medicamento {
         this.valor = valor;
     }
 
+
+    public String percMedicamentos(){
+        return "Ano: " + ano + '\'' +
+                ", Percentagem de medicamentos: '" + valor + " %" + '\'';
+    }
+
     public int getAno() {
         return ano;
     }
@@ -20,4 +26,7 @@ public class Medicamento {
     public double getValor() {
         return valor;
     }
+
+
+
 }

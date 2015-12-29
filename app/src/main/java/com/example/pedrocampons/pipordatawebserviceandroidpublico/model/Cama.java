@@ -19,6 +19,12 @@ public class Cama {
     }
 
 
+    public String mediaCamas(){
+        return "Ano: " + ano + '\'' +
+                ", Média: '" + valor + '\'';
+    }
+
+
     public int getAno() {
         return ano;
     }

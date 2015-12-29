@@ -92,15 +92,13 @@ public class MainActivity extends AppCompatActivity {
 
                     case "Selecione uma opção...":
 
-                     //   dataInicio.setEnabled(false);
-                     //   dataFim.setEnabled(false);
                         cat.setVisibility(View.GONE);
                         dataInicio.setVisibility(View.GONE);
                         dataFim.setVisibility(View.GONE);
                         acao.setVisibility(View.GONE);
                         break;
 
-                    case "GetMediaFuncionarioPorData":
+                    case "MediaCustoFuncionario":
 
 
                         dataInicio.setVisibility(View.VISIBLE);
@@ -111,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                         dataFim.setEnabled(true);
                         break;
 
-                    case "GetNumFuncionarioPorData":
+                    case "NumeroFuncionarios":
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
@@ -120,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
                         break;
 
-                    case "GetNumFuncCategoriaPorData":
+                    case "NumeroFuncionariosCategoria":
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
@@ -129,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
 
-                    case "GetPercentagemMedicamentosPorData":
+                    case "PercentagemMedicamentos":
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
@@ -140,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
 
-                    case "GetPercentagemPessoalPorData":
+                    case "PercentagemPessoal":
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
@@ -151,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
 
-                    case "GetAcoesCategoriaPorData":
+                    case "NumeroAcoesCategoria":
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
@@ -162,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
 
-                    case "GetPercentagemAcoesPorData":
+                    case "PercentagemAcoesCategoria":
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
@@ -172,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
 
-                    case "GetMediaCamasPorData":
+                    case "MediaCamasHospitais":
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
@@ -183,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
 
-                    case "GetRacioFuncionariosPorData":
+                    case "RacioFuncionariosEstabelecimentos":
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
@@ -222,50 +220,50 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,"Selecione uma opção",Toast.LENGTH_LONG).show();
                 break;
 
-            case "GetMediaFuncionarioPorData":
+            case "MediaCustoFuncionario":
                 GetMediaFunc getMediaFunc = new GetMediaFunc();
                 getMediaFunc.execute(dataInicio.getText().toString(), dataFim.getText().toString());
                 break;
 
-            case "GetNumFuncionarioPorData":
+            case "NumeroFuncionarios":
                 GetNumFunc getNumFunc = new GetNumFunc();
                 getNumFunc.execute(dataInicio.getText().toString(), dataFim.getText().toString());
                 break;
 
-            case "GetNumFuncCategoriaPorData":
+            case "NumeroFuncionariosCategoria":
                 GetNumFuncCategoria getNumFuncCat = new GetNumFuncCategoria();
                 getNumFuncCat.execute(dataInicio.getText().toString(), dataFim.getText().toString(), cat.getSelectedItem().toString());
                 break;
 
 
-            case "GetPercentagemMedicamentosPorData":
+            case "PercentagemMedicamentos":
                 GetPercentagemMedicamentos getPercentagemMed = new GetPercentagemMedicamentos();
                 getPercentagemMed.execute(dataInicio.getText().toString(), dataFim.getText().toString());
                 break;
 
 
-            case "GetPercentagemPessoalPorData":
+            case "PercentagemPessoal":
                 GetPercentagemPessoal getPercentagemPessoal = new GetPercentagemPessoal();
                 getPercentagemPessoal.execute(dataInicio.getText().toString(), dataFim.getText().toString());
                 break;
 
 
-            case "GetAcoesCategoriaPorData":
+            case "NumeroAcoesCategoria":
                 GetAcoesCategoria getAcoesCategoria = new GetAcoesCategoria();
                 getAcoesCategoria.execute(dataInicio.getText().toString(), dataFim.getText().toString(), acao.getSelectedItem().toString());
                 break;
 
-            case "GetPercentagemAcoesPorData":
+            case "PercentagemAcoesCategoria":
                 GetPerAcoesCat getPerAcoesCat = new GetPerAcoesCat();
                 getPerAcoesCat.execute(dataInicio.getText().toString(), dataFim.getText().toString(), acao.getSelectedItem().toString());
                 break;
 
-            case "GetMediaCamasPorData":
+            case "MediaCamasHospitais":
                 GetMediaCamas getMediaCamas = new GetMediaCamas();
                 getMediaCamas.execute(dataInicio.getText().toString(), dataFim.getText().toString());
                 break;
 
-            case "GetRacioFuncionariosPorData":
+            case "RacioFuncionariosEstabelecimentos":
                 GetRacioFuncionarios getRacioFunc = new GetRacioFuncionarios();
                 getRacioFunc.execute(dataInicio.getText().toString(), dataFim.getText().toString());
                 break;
@@ -374,12 +372,14 @@ public class MainActivity extends AppCompatActivity {
                     int ano = jsonFuncionario.getInt("Ano");
                     double valor = jsonFuncionario.getDouble("Valor");
                     Funcionario funcionario = new Funcionario(ano, valor);
+                    funcionario.mediaFunc();
 
                     funcionarioArrayList.add(funcionario);
 
 
+
                 }
-                Toast.makeText(MainActivity.this, " " + s , Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, " " + s, Toast.LENGTH_LONG).show();
 
                 ListView listView = (ListView) findViewById(R.id.listView2);
                 ArrayAdapter<Funcionario> adapter =
@@ -443,21 +443,22 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             try{
                 super.onPostExecute(s);
-                ArrayList<Funcionario> funcionarioCatArrayList = new ArrayList<>();
+                ArrayList<Funcionario> funcionarioArrayList = new ArrayList<>();
 
 
 
-                JSONArray jsonFuncionariosCatArray = new JSONArray(s);
+                JSONArray jsonFuncionariosArray = new JSONArray(s);
 
 
-                for (int i = 0; i < jsonFuncionariosCatArray.length(); i++) {
+                for (int i = 0; i < jsonFuncionariosArray.length(); i++) {
 
-                    JSONObject jsonFuncionarioCat = jsonFuncionariosCatArray.getJSONObject(i);
-                    int ano = jsonFuncionarioCat.getInt("Ano");
-                    double soma1 = jsonFuncionarioCat.getDouble("Soma1");
-                    Funcionario funcionarioCat = new Funcionario(ano, soma1);
+                    JSONObject jsonFuncionario = jsonFuncionariosArray.getJSONObject(i);
+                    int ano = jsonFuncionario.getInt("Ano");
+                    int soma1 = jsonFuncionario.getInt("Soma1");
+                    Funcionario funcionario = new Funcionario(ano, soma1);
+                    funcionario.funcionarios();
 
-                    funcionarioCatArrayList.add(funcionarioCat);
+                    funcionarioArrayList.add(funcionario);
 
 
                 }
@@ -465,7 +466,7 @@ public class MainActivity extends AppCompatActivity {
 
                 ListView listView = (ListView) findViewById(R.id.listView2);
                 ArrayAdapter<Funcionario> adapter =
-                        new ArrayAdapter<Funcionario>(MainActivity.this, android.R.layout.simple_list_item_1, funcionarioCatArrayList);
+                        new ArrayAdapter<Funcionario>(MainActivity.this, android.R.layout.simple_list_item_1, funcionarioArrayList);
 
                 listView.setAdapter(adapter);
             }catch (JSONException e){
@@ -541,8 +542,9 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject jsonFuncionarioCat = jsonFuncionariosCatArray.getJSONObject(i);
                     int ano = jsonFuncionarioCat.getInt("Ano");
-                    double soma1 = jsonFuncionarioCat.getDouble("Soma1");
+                    int soma1 = jsonFuncionarioCat.getInt("Soma1");
                     Funcionario funcionarioCat = new Funcionario(ano, soma1);
+                    funcionarioCat.funcionarios();
 
                     funcionarioCatArrayList.add(funcionarioCat);
 
@@ -629,6 +631,7 @@ public class MainActivity extends AppCompatActivity {
                     int ano = jsonMedicamento.getInt("Ano");
                     double valor = jsonMedicamento.getDouble("Valor");
                     Medicamento medicamento = new Medicamento(ano, valor);
+                    medicamento.percMedicamentos();
 
                     medicamentosArrayList.add(medicamento);
 
@@ -715,6 +718,7 @@ public class MainActivity extends AppCompatActivity {
                     int ano = jsonPessoal.getInt("Ano");
                     double valor = jsonPessoal.getDouble("Valor");
                     Funcionario funcionario = new Funcionario(ano, valor);
+                    funcionario.percPessoal();
 
                     pessoalArrayList.add(funcionario);
 
@@ -798,8 +802,9 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject jsonAcaoCat = jsonAcoesCatArray.getJSONObject(i);
                     int ano = jsonAcaoCat.getInt("Ano");
-                    double soma1 = jsonAcaoCat.getDouble("Soma1");
-                    Acao acaoCat = new Acao(ano, soma1);
+                    double valor = jsonAcaoCat.getDouble("Valor");
+                    Acao acaoCat = new Acao(ano, valor);
+                    acaoCat.acoesCat();
 
                     acoesCatArrayList.add(acaoCat);
 
@@ -883,8 +888,9 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject jsonAcaoPer = jsonAcaoPerArray.getJSONObject(i);
                     int ano = jsonAcaoPer.getInt("Ano");
-                    double soma1 = jsonAcaoPer.getDouble("Soma1");
-                    Acao acaoPer = new Acao(ano, soma1);
+                    double valor = jsonAcaoPer.getDouble("Valor");
+                    Acao acaoPer = new Acao(ano, valor);
+                    acaoPer.percAcoesCat();
 
                     acaoPerArrayList.add(acaoPer);
 
@@ -971,6 +977,7 @@ public class MainActivity extends AppCompatActivity {
                     int ano = jsonCama.getInt("Ano");
                     double valor = jsonCama.getDouble("Valor");
                     Cama cama = new Cama(ano, valor);
+                    cama.mediaCamas();
 
                     camaArrayList.add(cama);
 
@@ -1056,6 +1063,7 @@ public class MainActivity extends AppCompatActivity {
                     int ano = jsonFuncionario.getInt("Ano");
                     double valor = jsonFuncionario.getDouble("Valor");
                     Funcionario funcionario = new Funcionario(ano, valor);
+                    funcionario.racioFuncionarios();
 
                     funcionarioArrayList.add(funcionario);
 

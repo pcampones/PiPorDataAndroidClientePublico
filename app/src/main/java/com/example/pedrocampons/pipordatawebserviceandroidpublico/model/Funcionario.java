@@ -6,8 +6,6 @@ public class Funcionario implements Serializable{
 
     private int ano;
     private int soma1;
-    private int soma2;
-    private int soma3;
     private double valor;
 
 
@@ -20,16 +18,6 @@ public class Funcionario implements Serializable{
     }
 
 
-    public Funcionario(int ano, int soma1, int soma2, int soma3)
-    {
-
-        this.ano = ano;
-        this.soma1 = soma1;
-        this.soma2 = soma2;
-        this.soma3 = soma3;
-
-    }
-
     public Funcionario(int ano, double valor)
     {
 
@@ -37,12 +25,36 @@ public class Funcionario implements Serializable{
         this.valor = valor;
     }
 
-    @Override
-    public String toString(){
-        return "Funcionario" +
-                "ano=" + ano + '\'' +
-                ", valor='" + valor + '\'';
+    public String mediaFunc(){
+        return "Ano: " + ano + '\'' +
+                ", Média: '" + valor + '\'';
     }
+
+    public String funcionarios(){
+        return "Ano: " + ano + '\'' +
+                ", Número de funcionários: '" + soma1 + '\'';
+    }
+
+    public String percPessoal(){
+        return "Ano: " + ano + '\'' +
+                ", Percentagem de pessoal: '" + valor + " %" + '\'';
+    }
+
+    public String racioFuncionarios(){
+        return "Ano: " + ano + '\'' +
+                ", Percentagem de funcionários: '" + valor + " %" + '\'';
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -55,16 +67,6 @@ public class Funcionario implements Serializable{
     public int getSoma1() {
         return soma1;
     }
-
-
-    public int getSoma2() {
-        return soma2;
-    }
-
-    public int getSoma3() {
-        return soma3;
-    }
-
 
     public double getValor() {
         return valor;
