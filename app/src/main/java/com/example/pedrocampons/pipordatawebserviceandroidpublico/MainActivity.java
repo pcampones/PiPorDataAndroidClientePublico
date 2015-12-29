@@ -18,6 +18,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.pedrocampons.pipordatawebserviceandroidpublico.model.Acao;
+import com.example.pedrocampons.pipordatawebserviceandroidpublico.model.Cama;
 import com.example.pedrocampons.pipordatawebserviceandroidpublico.model.Funcionario;
 import com.example.pedrocampons.pipordatawebserviceandroidpublico.model.Medicamento;
 
@@ -260,6 +261,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case "GetMediaCamasPorData":
+                GetMediaCamas getMediaCamas = new GetMediaCamas();
+                getMediaCamas.execute(dataInicio.getText().toString(), dataFim.getText().toString());
                 break;
 
             case "GetRacioFuncionariosPorData":
@@ -891,6 +894,92 @@ public class MainActivity extends AppCompatActivity {
                 ListView listView = (ListView) findViewById(R.id.listView2);
                 ArrayAdapter<Acao> adapter =
                         new ArrayAdapter<Acao>(MainActivity.this, android.R.layout.simple_list_item_1, acaoPerArrayList);
+
+                listView.setAdapter(adapter);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+
+    private class GetMediaCamas extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                // SharedPreferences preferences = MetodosAnoActivity.this.getPreferences(Context.MODE_PRIVATE);
+                //token = preferences.getString("token", null);
+
+                String url = URL_WEBSERVICE
+                        + "/Rest/mediaCamas?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
+
+                HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
+
+                httpURLConnection.setDoOutput(false); // manda coisas para o webservice??
+
+                httpURLConnection.setDoInput(true); // recebe coisas do webservice?? neste caso sim , recebe o token
+
+                httpURLConnection.connect();
+                int responseCode = httpURLConnection.getResponseCode();
+                Log.i("responseCode", "" + responseCode);
+
+                // Se tudo correr bem,
+
+
+                // ir buscar os livos devolvidos
+
+                if (responseCode == 200) { // Status OK se tudo correr bem, a response é sempre 200
+
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    String camaEmJson = readStream(inputStream);
+
+
+
+
+                    return camaEmJson;
+
+
+
+                } else { // Have Problems
+                    return "Erro: " + responseCode;
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return  "Erro : " + e.getMessage();
+            }
+        }
+
+
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            try {
+                super.onPostExecute(s);
+                ArrayList<Cama> camaArrayList = new ArrayList<>();
+
+
+                JSONArray jsonCamaArray = new JSONArray(s);
+
+
+                for (int i = 0; i < jsonCamaArray.length(); i++) {
+
+                    JSONObject jsonCama = jsonCamaArray.getJSONObject(i);
+                    int ano = jsonCama.getInt("Ano");
+                    double valor = jsonCama.getDouble("Valor");
+                    Cama cama = new Cama(ano, valor);
+
+                    camaArrayList.add(cama);
+
+
+                }
+
+                ListView listView = (ListView) findViewById(R.id.listView2);
+                ArrayAdapter<Cama> adapter =
+                        new ArrayAdapter<Cama>(MainActivity.this, android.R.layout.simple_list_item_1, camaArrayList);
 
                 listView.setAdapter(adapter);
             } catch (JSONException e) {
