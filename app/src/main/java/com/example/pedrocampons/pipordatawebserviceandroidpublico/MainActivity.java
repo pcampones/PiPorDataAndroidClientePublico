@@ -802,8 +802,8 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject jsonAcaoCat = jsonAcoesCatArray.getJSONObject(i);
                     int ano = jsonAcaoCat.getInt("Ano");
-                    double valor = jsonAcaoCat.getDouble("Valor");
-                    Acao acaoCat = new Acao(ano, valor);
+                    int soma = jsonAcaoCat.getInt("Soma");
+                    Acao acaoCat = new Acao(ano, soma);
                     acaoCat.acoesCat();
 
                     acoesCatArrayList.add(acaoCat);

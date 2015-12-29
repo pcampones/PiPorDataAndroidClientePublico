@@ -5,6 +5,7 @@ public class Acao {
 
     private int ano;
     private double valor;
+    private int soma;
 
 
 
@@ -14,10 +15,16 @@ public class Acao {
         this.valor = valor;
     }
 
+    public Acao(int ano, int soma)
+    {
+        this.ano = ano;
+        this.soma = soma;
+    }
+
 
     public String acoesCat(){
         return "Ano: " + ano + '\'' +
-                ", Número de ações: '" + valor + '\'';
+                ", Número de ações: '" + soma + '\'';
     }
 
 
@@ -35,6 +42,10 @@ public class Acao {
 
     public double getValor() {
         return valor;
+    }
+
+    public double getSoma() {
+        return soma;
     }
 
 

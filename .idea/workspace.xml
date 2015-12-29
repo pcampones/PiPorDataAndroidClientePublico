@@ -11,11 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f7cb8e9-e47f-4b17-82cc-99fc4f9a653a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Acao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Acao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Cama.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Cama.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Medicamento.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Medicamento.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PiPorDataWebServiceAndroidPublico.iws" />
@@ -57,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.85833335">
-              <caret line="265" column="51" selection-start-line="265" selection-start-column="51" selection-end-line="265" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="806" column="39" selection-start-line="806" selection-start-column="39" selection-end-line="806" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,6 +71,19 @@
             <state vertical-scroll-proportion="-8.62963">
               <caret line="22" column="47" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="47" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Acao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Acao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.275">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="e#675#676#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1628,10 +1637,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MetodosAnoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Medicamento.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Acao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Cama.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Acao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java" />
       </list>
     </option>
@@ -1980,7 +1989,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451402695677</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Coisas mudadas">
+      <created>1451406077953</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1451406077953</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2047,7 +2062,8 @@
     <MESSAGE value=" Spinner mendt" />
     <MESSAGE value="Tudo a fiucnionar" />
     <MESSAGE value="Com o método que faltava" />
-    <option name="LAST_COMMIT_MESSAGE" value="Com o método que faltava" />
+    <MESSAGE value="Coisas mudadas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coisas mudadas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2310,19 +2326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Acao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-          <folding>
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Cama.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2356,10 +2359,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.85833335">
-          <caret line="265" column="51" selection-start-line="265" selection-start-column="51" selection-end-line="265" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="806" column="39" selection-start-line="806" selection-start-column="39" selection-end-line="806" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Acao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.275">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
           </folding>
         </state>
       </provider>
