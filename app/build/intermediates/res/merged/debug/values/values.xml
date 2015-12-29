@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="SpinnerAcoes">
+    <item>Consultas</item>
+    <item>Internamentos</item>
+    <item>Urgencias</item>
+</string-array>
     <string-array name="SpinnerCategorias">
         <item>Medicos</item>
         <item>Enfermeiros</item>
@@ -231,6 +236,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="anoFimHint">Data Fim</string>
+    <string name="anoFimHint2">Data Fim</string>
     <string name="anoIniHint">Data Inicio</string>
     <string name="app_name">PiPorDataWebServiceAndroidPublico</string>
     <string name="dataFimHint">Data Fim</string>

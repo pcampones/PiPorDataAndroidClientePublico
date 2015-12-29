@@ -2,9 +2,6 @@ package com.example.pedrocampons.pipordatawebserviceandroidpublico.model;
 
 import java.io.Serializable;
 
-/**
- * Created by Proprietario on 22-12-2015.
- */
 public class Funcionario implements Serializable{
 
     private int ano;
@@ -42,13 +39,9 @@ public class Funcionario implements Serializable{
 
     @Override
     public String toString(){
-        return "Funcionario{" +
-                "ano='" + ano + '\'' +
-                ", soma1='" + soma1 + '\'' +
-                ", soma2=" + soma2 +
-                ", soma3=" + soma3 +
-                ", valor='" + valor + '\'' +
-                '}';
+        return "Funcionario" +
+                "ano=" + ano + '\'' +
+                ", valor='" + valor + '\'';
     }
 
 

@@ -9,6 +9,7 @@
     <string name="anoIniHint">Data Inicio</string>
     <string name="anoFimHint">Data Fim</string>
     <string name="dataInicio2Hint">Data Inicio</string>
+    <string name="anoFimHint2">Data Fim</string>
     <string-array name="SpinnerList">
         <item>Selecione uma opção...</item>
         <item>GetMediaFuncionarioPorData</item>
@@ -27,4 +28,9 @@
         <item>PessoalDeEnfermagem</item>
         <item>TecnicosDiagnosticoTerapeutica</item>
     </string-array>
+    <string-array name="SpinnerAcoes">
+    <item>Consultas</item>
+    <item>Internamentos</item>
+    <item>Urgencias</item>
+</string-array>
 </resources>

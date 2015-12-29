@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<CharSequence> string;
     private ArrayAdapter<CharSequence> categorias;
 
+    private Spinner acao ;
+    private ArrayAdapter<CharSequence> acoes;
     private final static String URL_WEBSERVICE = "http://projetointerswebservice.apphb.com/Service1.svc";
     private static final int REQUEST_CODE = 1;
     @Override
@@ -60,17 +62,25 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         token = intent.getExtras().getString("token");
         tokenS = token.replace("\"", "");
+
+        acao = (Spinner) findViewById(R.id.spinner3);
+
+        cat = (Spinner) findViewById(R.id.spinner2);
         string =  ArrayAdapter.createFromResource(this,
                 R.array.SpinnerList,
                 android.R.layout.simple_spinner_dropdown_item);
-
-        cat = (Spinner) findViewById(R.id.spinner2);
         categorias =  ArrayAdapter.createFromResource(this,
                 R.array.SpinnerCategorias,
                 android.R.layout.simple_spinner_dropdown_item);
+        acoes = ArrayAdapter.createFromResource(this,
+                R.array.SpinnerAcoes,
+                android.R.layout.simple_spinner_dropdown_item);
         string.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        categorias.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        acoes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metodos.setAdapter(string);
         cat.setAdapter(categorias);
+        acao.setAdapter(acoes);
         metodos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
@@ -81,17 +91,23 @@ public class MainActivity extends AppCompatActivity {
 
                     case "Selecione uma opção...":
 
-                        dataInicio.setEnabled(false);
-                        dataFim.setEnabled(false);
+                     //   dataInicio.setEnabled(false);
+                     //   dataFim.setEnabled(false);
                         cat.setVisibility(View.GONE);
-
+                        dataInicio.setVisibility(View.GONE);
+                        dataFim.setVisibility(View.GONE);
+                        acao.setVisibility(View.GONE);
                         break;
 
                     case "GetMediaFuncionarioPorData":
 
+
+                        dataInicio.setVisibility(View.VISIBLE);
+                        dataFim.setVisibility(View.VISIBLE);
+                        cat.setVisibility(View.GONE);
+                        acao.setVisibility(View.GONE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
-                        cat.setVisibility(View.GONE);
                         break;
 
                     case "GetNumFuncionarioPorData":
@@ -99,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
-
+                        acao.setVisibility(View.GONE);
 
                         break;
 
@@ -107,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
+                        acao.setVisibility(View.GONE);
                         cat.setVisibility(View.VISIBLE);
                         break;
 
@@ -116,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
+                        acao.setVisibility(View.GONE);
 
 
                         break;
@@ -126,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
+                        acao.setVisibility(View.GONE);
 
 
                         break;
@@ -135,7 +154,8 @@ public class MainActivity extends AppCompatActivity {
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
-                        cat.setVisibility(View.VISIBLE);
+                        cat.setVisibility(View.GONE);
+                        acao.setVisibility(View.VISIBLE);
 
 
                         break;
@@ -145,8 +165,8 @@ public class MainActivity extends AppCompatActivity {
 
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
-                        cat.setVisibility(View.VISIBLE);
-
+                        cat.setVisibility(View.GONE);
+                        acao.setVisibility(View.VISIBLE);
 
                         break;
 
@@ -156,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
+                        acao.setVisibility(View.GONE);
 
 
                         break;
@@ -166,6 +187,8 @@ public class MainActivity extends AppCompatActivity {
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
+                        acao.setVisibility(View.GONE);
+
 
 
                         break;
@@ -228,12 +251,12 @@ public class MainActivity extends AppCompatActivity {
 
             case "GetAcoesCategoriaPorData":
                 GetAcoesCategoria getAcoesCategoria = new GetAcoesCategoria();
-                getAcoesCategoria.execute(dataInicio.getText().toString(), dataFim.getText().toString(), cat.getSelectedItem().toString());
+                getAcoesCategoria.execute(dataInicio.getText().toString(), dataFim.getText().toString(), acao.getSelectedItem().toString());
                 break;
 
             case "GetPercentagemAcoesPorData":
                 GetPerAcoesCat getPerAcoesCat = new GetPerAcoesCat();
-                getPerAcoesCat.execute(dataInicio.getText().toString(), dataFim.getText().toString(), cat.getSelectedItem().toString());
+                getPerAcoesCat.execute(dataInicio.getText().toString(), dataFim.getText().toString(), acao.getSelectedItem().toString());
                 break;
 
             case "GetMediaCamasPorData":
@@ -290,6 +313,8 @@ public class MainActivity extends AppCompatActivity {
                 String url = URL_WEBSERVICE
                         + "/Rest/funcionariosMedia?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
 
+
+
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 
                 httpURLConnection.setDoOutput(false); // manda coisas para o webservice??
@@ -351,6 +376,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
+                Toast.makeText(MainActivity.this, " " + s , Toast.LENGTH_LONG).show();
 
                 ListView listView = (ListView) findViewById(R.id.listView2);
                 ArrayAdapter<Funcionario> adapter =
@@ -363,16 +389,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private class GetNumFunc extends AsyncTask<String, Void, String> {
+    private class GetNumFunc extends AsyncTask<String, Void, String>{
 
         @Override
         protected String doInBackground(String... params) {
-            try {
-                // SharedPreferences preferences = MetodosAnoActivity.this.getPreferences(Context.MODE_PRIVATE);
-                //token = preferences.getString("token", null);
+            try{
 
                 String url = URL_WEBSERVICE
-                        + "Rest/funcionarios?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
+                        + "/Rest/funcionarios?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
 
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 
@@ -404,46 +428,47 @@ public class MainActivity extends AppCompatActivity {
                 } else { // Have Problems
                     return "Erro: " + responseCode;
                 }
-
-            } catch (IOException e) {
+            }
+            catch (IOException e){
                 e.printStackTrace();
                 return  "Erro : " + e.getMessage();
             }
+
         }
-
-
 
         @Override
         protected void onPostExecute(String s) {
-
-            try {
+            try{
                 super.onPostExecute(s);
-                ArrayList<Funcionario> funcionarioArrayList = new ArrayList<>();
+                ArrayList<Funcionario> funcionarioCatArrayList = new ArrayList<>();
 
 
-                JSONArray jsonFuncionariosArray = new JSONArray(s);
+
+                JSONArray jsonFuncionariosCatArray = new JSONArray(s);
 
 
-                for (int i = 0; i < jsonFuncionariosArray.length(); i++) {
+                for (int i = 0; i < jsonFuncionariosCatArray.length(); i++) {
 
-                    JSONObject jsonFuncionario = jsonFuncionariosArray.getJSONObject(i);
-                    int ano = jsonFuncionario.getInt("Ano");
-                    double valor = jsonFuncionario.getDouble("Valor");
-                    Funcionario funcionario = new Funcionario(ano, valor);
+                    JSONObject jsonFuncionarioCat = jsonFuncionariosCatArray.getJSONObject(i);
+                    int ano = jsonFuncionarioCat.getInt("Ano");
+                    double soma1 = jsonFuncionarioCat.getDouble("Soma1");
+                    Funcionario funcionarioCat = new Funcionario(ano, soma1);
 
-                    funcionarioArrayList.add(funcionario);
+                    funcionarioCatArrayList.add(funcionarioCat);
 
 
                 }
+                Toast.makeText(MainActivity.this," " + s, Toast.LENGTH_LONG).show();
 
                 ListView listView = (ListView) findViewById(R.id.listView2);
                 ArrayAdapter<Funcionario> adapter =
-                        new ArrayAdapter<Funcionario>(MainActivity.this, android.R.layout.simple_list_item_1, funcionarioArrayList);
+                        new ArrayAdapter<Funcionario>(MainActivity.this, android.R.layout.simple_list_item_1, funcionarioCatArrayList);
 
                 listView.setAdapter(adapter);
-            } catch (JSONException e) {
+            }catch (JSONException e){
                 e.printStackTrace();
             }
+
         }
     }
 
@@ -457,7 +482,7 @@ public class MainActivity extends AppCompatActivity {
                 //token = preferences.getString("token", null);
 
                 String url = URL_WEBSERVICE
-                        + "Rest/funcionariosCategoriaS?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
+                        + "/Rest/funcionariosCategoriaS?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
 
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 
@@ -543,7 +568,7 @@ public class MainActivity extends AppCompatActivity {
                 //token = preferences.getString("token", null);
 
                 String url = URL_WEBSERVICE
-                        + "Rest/percentagemMedicamentos?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
+                        + "/Rest/percentagemMedicamentos?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
 
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 
@@ -629,7 +654,7 @@ public class MainActivity extends AppCompatActivity {
                 //token = preferences.getString("token", null);
 
                 String url = URL_WEBSERVICE
-                        + "Rest/percentagemPessoal?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
+                        + "/Rest/percentagemPessoal?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
 
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 
@@ -714,7 +739,7 @@ public class MainActivity extends AppCompatActivity {
                 //token = preferences.getString("token", null);
 
                 String url = URL_WEBSERVICE
-                        + "Rest/acoesCategoria?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
+                        + "/Rest/acoesCategoria?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
 
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 
@@ -799,7 +824,7 @@ public class MainActivity extends AppCompatActivity {
                 //token = preferences.getString("token", null);
 
                 String url = URL_WEBSERVICE
-                        + "Rest/percentagemAcoes?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
+                        + "/Rest/percentagemAcoes?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
 
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 
@@ -884,7 +909,7 @@ public class MainActivity extends AppCompatActivity {
                 //token = preferences.getString("token", null);
 
                 String url = URL_WEBSERVICE
-                        + "Rest/racioFuncionarios?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
+                        + "/Rest/racioFuncionarios?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&token=" + tokenS;
 
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 

@@ -1,8 +1,5 @@
 package com.example.pedrocampons.pipordatawebserviceandroidpublico.model;
 
-/**
- * Created by Proprietario on 22-12-2015.
- */
 public class Medicamento {
 
     private int ano;
