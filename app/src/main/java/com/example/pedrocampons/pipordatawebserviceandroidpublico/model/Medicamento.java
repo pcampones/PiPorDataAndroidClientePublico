@@ -14,10 +14,7 @@ public class Medicamento {
     }
 
 
-    public String percMedicamentos(){
-        return "Ano: " + ano + '\'' +
-                ", Percentagem de medicamentos: '" + valor + " %" + '\'';
-    }
+
 
     public int getAno() {
         return ano;
@@ -27,6 +24,10 @@ public class Medicamento {
         return valor;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Ano : " + ano +
+                "\nPercentagem : " + valor +
+                " %";
+    }
 }

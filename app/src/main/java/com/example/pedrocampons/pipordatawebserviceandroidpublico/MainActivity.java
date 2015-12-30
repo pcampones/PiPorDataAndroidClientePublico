@@ -386,14 +386,10 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject jsonFuncionario = jsonFuncionariosArray.getJSONObject(i);
                     int ano = jsonFuncionario.getInt("Ano");
+                    double soma1 = jsonFuncionario.getDouble("Soma1");
                     double valor = jsonFuncionario.getDouble("Valor");
-                    Funcionario funcionario = new Funcionario(ano, valor);
-                    funcionario.mediaFunc();
-
+                    Funcionario funcionario = new Funcionario(ano,soma1, valor);
                     funcionarioArrayList.add(funcionario);
-
-
-
                 }
                 Toast.makeText(MainActivity.this, " " + s, Toast.LENGTH_LONG).show();
 
@@ -467,14 +463,14 @@ public class MainActivity extends AppCompatActivity {
 
 
                 for (int i = 0; i < jsonFuncionariosArray.length(); i++) {
-
                     JSONObject jsonFuncionario = jsonFuncionariosArray.getJSONObject(i);
                     int ano = jsonFuncionario.getInt("Ano");
-                    int soma1 = jsonFuncionario.getInt("Soma1");
-                    Funcionario funcionario = new Funcionario(ano, soma1);
-                    funcionario.funcionarios();
+                    double soma1 = jsonFuncionario.getDouble("Soma1");
+                    double valor = jsonFuncionario.getDouble("Valor");
+                    Funcionario funcionario = new Funcionario(ano,soma1, valor);
 
                     funcionarioArrayList.add(funcionario);
+
 
 
                 }
@@ -556,13 +552,14 @@ public class MainActivity extends AppCompatActivity {
 
                 for (int i = 0; i < jsonFuncionariosCatArray.length(); i++) {
 
-                    JSONObject jsonFuncionarioCat = jsonFuncionariosCatArray.getJSONObject(i);
-                    int ano = jsonFuncionarioCat.getInt("Ano");
-                    int soma1 = jsonFuncionarioCat.getInt("Soma1");
-                    Funcionario funcionarioCat = new Funcionario(ano, soma1);
-                    funcionarioCat.funcionarios();
+                    JSONObject jsonFuncionario = jsonFuncionariosCatArray.getJSONObject(i);
+                    int ano = jsonFuncionario.getInt("Ano");
+                    double soma1 = jsonFuncionario.getDouble("Soma1");
+                    double valor = jsonFuncionario.getDouble("Valor");
+                    Funcionario funcionario = new Funcionario(ano,soma1, valor);
 
-                    funcionarioCatArrayList.add(funcionarioCat);
+                    funcionarioCatArrayList.add(funcionario);
+
 
 
                 }
@@ -647,7 +644,6 @@ public class MainActivity extends AppCompatActivity {
                     int ano = jsonMedicamento.getInt("Ano");
                     double valor = jsonMedicamento.getDouble("Valor");
                     Medicamento medicamento = new Medicamento(ano, valor);
-                    medicamento.percMedicamentos();
 
                     medicamentosArrayList.add(medicamento);
 
@@ -730,13 +726,16 @@ public class MainActivity extends AppCompatActivity {
 
                 for (int i = 0; i < jsonPessoalArray.length(); i++) {
 
-                    JSONObject jsonPessoal = jsonPessoalArray.getJSONObject(i);
-                    int ano = jsonPessoal.getInt("Ano");
-                    double valor = jsonPessoal.getDouble("Valor");
-                    Funcionario funcionario = new Funcionario(ano, valor);
-                    funcionario.percPessoal();
+
+                    JSONObject jsonFuncionario = jsonPessoalArray.getJSONObject(i);
+                    int ano = jsonFuncionario.getInt("Ano");
+                    double soma1 = jsonFuncionario.getDouble("Soma1");
+                    double valor = jsonFuncionario.getDouble("Valor");
+                    Funcionario funcionario = new Funcionario(ano,soma1, valor);
 
                     pessoalArrayList.add(funcionario);
+
+
 
 
                 }
@@ -818,9 +817,9 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject jsonAcaoCat = jsonAcoesCatArray.getJSONObject(i);
                     int ano = jsonAcaoCat.getInt("Ano");
-                    int soma = jsonAcaoCat.getInt("Soma");
-                    Acao acaoCat = new Acao(ano, soma);
-                    acaoCat.acoesCat();
+                    double valor = jsonAcaoCat.getDouble("Valor");
+                    double soma = jsonAcaoCat.getDouble("Soma1");
+                    Acao acaoCat = new Acao(ano,valor, soma);
 
                     acoesCatArrayList.add(acaoCat);
 
@@ -902,13 +901,14 @@ public class MainActivity extends AppCompatActivity {
 
                 for (int i = 0; i < jsonAcaoPerArray.length(); i++) {
 
-                    JSONObject jsonAcaoPer = jsonAcaoPerArray.getJSONObject(i);
-                    int ano = jsonAcaoPer.getInt("Ano");
-                    double valor = jsonAcaoPer.getDouble("Valor");
-                    Acao acaoPer = new Acao(ano, valor);
-                    acaoPer.percAcoesCat();
+                    JSONObject jsonAcaoCat = jsonAcaoPerArray.getJSONObject(i);
+                    int ano = jsonAcaoCat.getInt("Ano");
+                    double valor = jsonAcaoCat.getDouble("Valor");
+                    double soma = jsonAcaoCat.getInt("Soma1");
+                    Acao acaoCat = new Acao(ano,valor, soma);
 
-                    acaoPerArrayList.add(acaoPer);
+
+                    acaoPerArrayList.add(acaoCat);
 
 
                 }
@@ -993,8 +993,6 @@ public class MainActivity extends AppCompatActivity {
                     int ano = jsonCama.getInt("Ano");
                     double valor = jsonCama.getDouble("Valor");
                     Cama cama = new Cama(ano, valor);
-                    cama.mediaCamas();
-
                     camaArrayList.add(cama);
 
 
@@ -1077,11 +1075,12 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject jsonFuncionario = jsonFuncionarioArray.getJSONObject(i);
                     int ano = jsonFuncionario.getInt("Ano");
+                    double soma1 = jsonFuncionario.getDouble("Soma1");
                     double valor = jsonFuncionario.getDouble("Valor");
-                    Funcionario funcionario = new Funcionario(ano, valor);
-                    funcionario.racioFuncionarios();
-
+                    Funcionario funcionario = new Funcionario(ano,soma1, valor);
                     funcionarioArrayList.add(funcionario);
+
+
 
 
                 }

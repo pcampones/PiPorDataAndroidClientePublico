@@ -1,8 +1,6 @@
 package com.example.pedrocampons.pipordatawebserviceandroidpublico.model;
 
-/**
- * Created by Proprietario on 29-12-2015.
- */
+
 public class Cama {
 
 
@@ -19,19 +17,23 @@ public class Cama {
     }
 
 
-    public String mediaCamas(){
-        return "Ano: " + ano + '\'' +
-                ", Média: '" + valor + '\'';
-    }
-
-
     public int getAno() {
+
         return ano;
     }
 
     public double getValor() {
         return valor;
     }
+
+
+    @Override
+    public String toString() {
+        return
+                "Ano : " + ano +
+                "\nMédia : " + valor ;
+    }
+
 
 
 }

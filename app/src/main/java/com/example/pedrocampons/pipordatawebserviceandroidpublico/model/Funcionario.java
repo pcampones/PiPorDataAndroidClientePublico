@@ -5,27 +5,27 @@ import java.io.Serializable;
 public class Funcionario implements Serializable{
 
     private int ano;
-    private int soma1;
+    private double soma1;
     private double valor;
 
 
-    public Funcionario(int ano, int soma1)
+    public Funcionario(int ano, double soma1,double valor)
     {
 
         this.ano = ano;
         this.soma1 = soma1;
+        this.valor = valor;
 
     }
 
 
-    public Funcionario(int ano, double valor)
+    /*public Funcionario(int ano, double valor)
     {
 
         this.ano = ano;
         this.valor = valor;
-    }
-
-    public String mediaFunc(){
+    }*/
+   /* public String mediaFunc(){
         return "Ano: " + ano + '\'' +
                 ", Média: '" + valor + '\'';
     }
@@ -43,28 +43,13 @@ public class Funcionario implements Serializable{
     public String racioFuncionarios(){
         return "Ano: " + ano + '\'' +
                 ", Percentagem de funcionários: '" + valor + " %" + '\'';
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }*/
 
     public int getAno() {
         return ano;
     }
 
-    public int getSoma1() {
+    public double getSoma1() {
         return soma1;
     }
 
@@ -72,5 +57,17 @@ public class Funcionario implements Serializable{
         return valor;
     }
 
+    @Override
+    public String toString() {
+        String res= null;
+        if(valor == 0){
+            res= "Ano : " + ano +  "\nResultado :" + soma1;
+        }
+        else
+        {
+            res = "Ano : " + ano + " \nPercentagem : " + valor + "%" ;
+        }
+            return  res;
 
+    }
 }

@@ -5,33 +5,17 @@ public class Acao {
 
     private int ano;
     private double valor;
-    private int soma;
+    private double soma;
 
 
 
-    public Acao(int ano, double valor)
+    public Acao(int ano, double valor, double soma)
     {
         this.ano = ano;
         this.valor = valor;
-    }
-
-    public Acao(int ano, int soma)
-    {
-        this.ano = ano;
         this.soma = soma;
     }
 
-
-    public String acoesCat(){
-        return "Ano: " + ano + '\'' +
-                ", Número de ações: '" + soma + '\'';
-    }
-
-
-    public String percAcoesCat(){
-        return "Ano: " + ano + '\'' +
-                ", Percentagem de ações: '" + valor + " %" + '\'';
-    }
 
 
 
@@ -48,6 +32,16 @@ public class Acao {
         return soma;
     }
 
+    @Override
+    public String toString() {
 
+        String res = null;
+        if(valor == 0){
+            res = "Ano : " + ano + "\nNúmero de Ações : " + soma ;
+        }else {
+            res = "Ano : " + ano + "\nPercentagem de Ações : " + valor + " %";
+        }
 
+        return  res;
+    }
 }
