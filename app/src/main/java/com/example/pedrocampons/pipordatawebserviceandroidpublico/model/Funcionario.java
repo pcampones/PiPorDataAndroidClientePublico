@@ -5,16 +5,20 @@ import java.io.Serializable;
 public class Funcionario implements Serializable{
 
     private int ano;
-    private double soma1;
-    private double valor;
+    private double media;
+    private double numFunc;
+    private double percenPessoal;
+    private double percenFun;
 
 
-    public Funcionario(int ano, double soma1,double valor)
+    public Funcionario(int ano,double media, double numFun,double percenPessoal, double percenFun)
     {
 
         this.ano = ano;
-        this.soma1 = soma1;
-        this.valor = valor;
+        this.media = media;
+        this.numFunc = numFun;
+        this.percenPessoal = percenPessoal;
+        this.percenFun = percenFun;
 
     }
 
@@ -49,23 +53,38 @@ public class Funcionario implements Serializable{
         return ano;
     }
 
-    public double getSoma1() {
-        return soma1;
+    public double getMedia() {
+        return media;
     }
 
-    public double getValor() {
-        return valor;
+    public double getNumFunc() {
+        return numFunc;
+    }
+
+    public double getPercenFun() {
+        return percenFun;
+    }
+
+    public double getPercenPessoal() {
+        return percenPessoal;
     }
 
     @Override
     public String toString() {
         String res= null;
-        if(valor == 0){
-            res= "Ano : " + ano +  "\nResultado :" + soma1;
+        if(percenPessoal == 0 && numFunc ==0 && percenFun == 0){
+            res= "Ano : " + ano +  "\nMédia :" + media;
         }
-        else
+        else if(percenPessoal == 0 && percenFun ==0 && media == 0)
         {
-            res = "Ano : " + ano + " \nPercentagem : " + valor + "%" ;
+            res = "Ano : " + ano +
+                    " \nNúmero de Funcionários : " + numFunc  ;
+        }else if(numFunc == 0 && percenFun ==0 && media == 0){
+            res = "Ano : " + ano +
+                    " \nPercentagem de Pessoal : " + percenPessoal + " %" ;
+        }else if(numFunc == 0 && percenPessoal ==0 && media == 0){
+            res = "Ano : " + ano +
+                    " \nPercentagem de funcionários : " + percenFun + " %" ;
         }
             return  res;
 
