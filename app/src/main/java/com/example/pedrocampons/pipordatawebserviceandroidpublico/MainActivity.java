@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
                     getNumFuncCat.execute(
                             dataInicio.getText().toString(),
                             dataFim.getText().toString(),
-                            cat.getSelectedItem().toString().trim());
+                            cat.getSelectedItem().toString());
                     break;
 
 
@@ -487,7 +487,8 @@ public class MainActivity extends AppCompatActivity {
                 //token = preferences.getString("token", null);
 
                 String url = URL_WEBSERVICE
-                        + "/Rest/funcionariosCategoriaS?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
+                        + "/Rest/funcionariosCategoriaS?dataInicio=" + params[0] + "&dataFim=" + params[1]
+                        + "&categoria=" +  params[2].replace(" ", "")  + "&token=" + tokenS;
 
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 
