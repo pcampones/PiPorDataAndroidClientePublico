@@ -86,21 +86,19 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
 
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 String item = parent.getItemAtPosition(position).toString();
+
                 switch (item){
 
                     case "Selecione uma opção...":
-
                         cat.setVisibility(View.GONE);
                         dataInicio.setVisibility(View.GONE);
                         dataFim.setVisibility(View.GONE);
                         acao.setVisibility(View.GONE);
                         break;
-
-                    case "MediaCustoFuncionario":
-
-
+                    case "Custo Médio de um Funcionário":
                         dataInicio.setVisibility(View.VISIBLE);
                         dataFim.setVisibility(View.VISIBLE);
                         cat.setVisibility(View.GONE);
@@ -108,20 +106,15 @@ public class MainActivity extends AppCompatActivity {
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         break;
-
-                    case "NumeroFuncionarios":
-
-                        dataInicio.setVisibility(View.VISIBLE);
+                    case "Número de Funcionários":
+                         dataInicio.setVisibility(View.VISIBLE);
                         dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
                         acao.setVisibility(View.GONE);
-
                         break;
-
-                    case "NumeroFuncionariosCategoria":
-
+                    case "Número de Funcionários Por Categoria":
                         dataInicio.setVisibility(View.VISIBLE);
                         dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
@@ -129,60 +122,47 @@ public class MainActivity extends AppCompatActivity {
                         acao.setVisibility(View.GONE);
                         cat.setVisibility(View.VISIBLE);
                         break;
-
-
-                    case "PercentagemMedicamentos":
-
+                    case "Percentagem dos Custos com Medicamentos":
                         dataInicio.setVisibility(View.VISIBLE);
                         dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
                         acao.setVisibility(View.GONE);
-
-
                         break;
-
-
-                    case "PercentagemPessoal":
-
+                    case "Percentagem dos Custos com Pessoal":
                         dataInicio.setVisibility(View.VISIBLE);
                         dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
                         acao.setVisibility(View.GONE);
-
-
                         break;
-
-
-                    case "NumeroAcoesCategoria":
-
+                    case "Número de Consultas, Internamentos e Urgências em Hospitais":
                         dataInicio.setVisibility(View.VISIBLE);
                         dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
                         acao.setVisibility(View.VISIBLE);
-
-
                         break;
-
-
-                    case "PercentagemAcoesCategoria":
-
+                    case "Percentagem de Consultas, Internamentos e Urgências em Centros de Saúde":
                         dataInicio.setVisibility(View.VISIBLE);
                         dataFim.setVisibility(View.VISIBLE);
                         dataInicio.setEnabled(true);
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
                         acao.setVisibility(View.VISIBLE);
-
                         break;
-
-
-                    case "MediaCamasHospitais":
+                    case "Média do Número de Camas Disponíveis nos Hospitais":
+                        dataInicio.setVisibility(View.VISIBLE);
+                        dataFim.setVisibility(View.VISIBLE);
+                        dataInicio.setEnabled(true);
+                        dataFim.setEnabled(true);
+                        cat.setVisibility(View.GONE);
+                        acao.setVisibility(View.GONE);
+                        break;
+                    case "Rácio entre o número de Funcionários e número de Estabelecimentos":
 
                         dataInicio.setVisibility(View.VISIBLE);
                         dataFim.setVisibility(View.VISIBLE);
@@ -190,23 +170,7 @@ public class MainActivity extends AppCompatActivity {
                         dataFim.setEnabled(true);
                         cat.setVisibility(View.GONE);
                         acao.setVisibility(View.GONE);
-
-
-                        break;
-
-
-                    case "RacioFuncionariosEstabelecimentos":
-
-                        dataInicio.setVisibility(View.VISIBLE);
-                        dataFim.setVisibility(View.VISIBLE);
-                        dataInicio.setEnabled(true);
-                        dataFim.setEnabled(true);
-                        cat.setVisibility(View.GONE);
-                        acao.setVisibility(View.GONE);
-
-
-
-                        break;
+                      break;
 
 
 
@@ -219,77 +183,99 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        Toast.makeText(this,  tokenS, Toast.LENGTH_LONG).show();
+      //  Toast.makeText(this,  tokenS, Toast.LENGTH_LONG).show();
 
 
     }
 
+  public void button_MetodosonClick(View view) {
 
-
-    public void button_MetodosonClick(View view) {
+        int a = 0 ;
 
         String text = metodos.getSelectedItem().toString();
 
-        switch(text){
+        a = verificaDatas(dataInicio.getText().toString(),dataFim.getText().toString());
 
-            case "Selecione uma opção...":
-                Toast.makeText(this,"Selecione uma opção",Toast.LENGTH_LONG).show();
-                break;
+        if (a == 1) {
 
-            case "MediaCustoFuncionario":
-                GetMediaFunc getMediaFunc = new GetMediaFunc();
-                //if()
-                getMediaFunc.execute(dataInicio.getText().toString(), dataFim.getText().toString());
-                break;
+            Toast.makeText(this, "A executar...", Toast.LENGTH_SHORT).show();
+            switch (text) {
 
-            case "NumeroFuncionarios":
-                GetNumFunc getNumFunc = new GetNumFunc();
-                getNumFunc.execute(dataInicio.getText().toString(), dataFim.getText().toString());
-                break;
+                case "Selecione uma opção...":
+                    Toast.makeText(this, "Selecione uma opção!", Toast.LENGTH_LONG).show();
+                    break;
 
-            case "NumeroFuncionariosCategoria":
-                GetNumFuncCategoria getNumFuncCat = new GetNumFuncCategoria();
-                getNumFuncCat.execute(dataInicio.getText().toString(), dataFim.getText().toString(), cat.getSelectedItem().toString());
-                break;
+                case "Custo Médio de um Funcionário":
+                    GetMediaFunc getMediaFunc = new GetMediaFunc();
+                    getMediaFunc.execute(
+                            dataInicio.getText().toString(),
+                            dataFim.getText().toString());
+                    break;
+
+                case "Número de Funcionários":
+                    GetNumFunc getNumFunc = new GetNumFunc();
+                    getNumFunc.execute(
+                            dataInicio.getText().toString(),
+                            dataFim.getText().toString());
+                    break;
+
+                case "Número de Funcionários Por Categoria":
+                    GetNumFuncCategoria getNumFuncCat = new GetNumFuncCategoria();
+                    getNumFuncCat.execute(
+                            dataInicio.getText().toString(),
+                            dataFim.getText().toString(),
+                            cat.getSelectedItem().toString().trim());
+                    break;
 
 
-            case "PercentagemMedicamentos":
-                GetPercentagemMedicamentos getPercentagemMed = new GetPercentagemMedicamentos();
-                getPercentagemMed.execute(dataInicio.getText().toString(), dataFim.getText().toString());
-                break;
+                case "Percentagem dos Custos com Medicamentos":
+                    GetPercentagemMedicamentos getPercentagemMed = new GetPercentagemMedicamentos();
+                    getPercentagemMed.execute(
+                            dataInicio.getText().toString(),
+                            dataFim.getText().toString());
+                    break;
+
+                case "Percentagem dos Custos com Pessoal":
+                    GetPercentagemPessoal getPercentagemPessoal = new GetPercentagemPessoal();
+                    getPercentagemPessoal.execute(
+                            dataInicio.getText().toString(),
+                            dataFim.getText().toString());
+                    break;
 
 
-            case "PercentagemPessoal":
-                GetPercentagemPessoal getPercentagemPessoal = new GetPercentagemPessoal();
-                getPercentagemPessoal.execute(dataInicio.getText().toString(), dataFim.getText().toString());
-                break;
+                case "Número de Consultas, Internamentos e Urgências em Hospitais":
+                    GetAcoesCategoria getAcoesCategoria = new GetAcoesCategoria();
+                    getAcoesCategoria.execute(
+                            dataInicio.getText().toString(),
+                            dataFim.getText().toString(),
+                            acao.getSelectedItem().toString());
+                    break;
 
+                case "Percentagem de Consultas, Internamentos e Urgências em Centros de Saúde":
+                    GetPerAcoesCat getPerAcoesCat = new GetPerAcoesCat();
+                    getPerAcoesCat.execute(
+                            dataInicio.getText().toString(),
+                            dataFim.getText().toString(),
+                            acao.getSelectedItem().toString());
+                    break;
 
-            case "NumeroAcoesCategoria":
-                GetAcoesCategoria getAcoesCategoria = new GetAcoesCategoria();
-                getAcoesCategoria.execute(dataInicio.getText().toString(), dataFim.getText().toString(), acao.getSelectedItem().toString());
-                break;
+                case "Média do Número de Camas Disponíveis nos Hospitais":
+                    GetMediaCamas getMediaCamas = new GetMediaCamas();
+                    getMediaCamas.execute(
+                            dataInicio.getText().toString(),
+                            dataFim.getText().toString());
+                    break;
 
-            case "PercentagemAcoesCategoria":
-                GetPerAcoesCat getPerAcoesCat = new GetPerAcoesCat();
-                getPerAcoesCat.execute(dataInicio.getText().toString(), dataFim.getText().toString(), acao.getSelectedItem().toString());
-                break;
-
-            case "MediaCamasHospitais":
-                GetMediaCamas getMediaCamas = new GetMediaCamas();
-                getMediaCamas.execute(dataInicio.getText().toString(), dataFim.getText().toString());
-                break;
-
-            case "RacioFuncionariosEstabelecimentos":
-                GetRacioFuncionarios getRacioFunc = new GetRacioFuncionarios();
-                getRacioFunc.execute(dataInicio.getText().toString(), dataFim.getText().toString());
-                break;
+                case "Rácio entre o número de Funcionários e número de Estabelecimentos":
+                    GetRacioFuncionarios getRacioFunc = new GetRacioFuncionarios();
+                    getRacioFunc.execute(
+                            dataInicio.getText().toString(),
+                            dataFim.getText().toString());
+                    break;
+            }
+        } else {
+            Toast.makeText(this,"Data de Inicio tem que ser menor que a Data de Fim!",Toast.LENGTH_LONG).show();
         }
-
-
-
-
-
     }
     private String readStream(InputStream is) {
         StringBuilder sb = new StringBuilder(512);
@@ -305,7 +291,6 @@ public class MainActivity extends AppCompatActivity {
         return sb.toString();
     }
 
-
     @NonNull
     private HttpURLConnection setupHttpURLConnection(String URL, String requestMethod) throws IOException {
         java.net.URL url = new URL(URL);
@@ -318,7 +303,6 @@ public class MainActivity extends AppCompatActivity {
 
         return httpURLConnection;
     }
-
 
     private class GetMediaFunc extends AsyncTask<String, Void, String> {
 
@@ -396,7 +380,6 @@ public class MainActivity extends AppCompatActivity {
                     Funcionario funcionario = new Funcionario(ano,media,numFun,percenPessoal,percenFun);
                     funcionarioArrayList.add(funcionario);
                 }
-                Toast.makeText(MainActivity.this, " " + s, Toast.LENGTH_LONG).show();
 
                 ListView listView = (ListView) findViewById(R.id.listView2);
                 ArrayAdapter<Funcionario> adapter =
@@ -483,8 +466,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-                Toast.makeText(MainActivity.this," " + s, Toast.LENGTH_LONG).show();
-
                 ListView listView = (ListView) findViewById(R.id.listView2);
                 ArrayAdapter<Funcionario> adapter =
                         new ArrayAdapter<Funcionario>(MainActivity.this, android.R.layout.simple_list_item_1, funcionarioArrayList);
@@ -1107,7 +1088,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public int verificaDatas(String dataInicio, String dataFim){
 
+        int a = dataInicio.compareTo(dataFim);
+        if (a > 0){
+            return -1;
+        }else{
+            return 1;
+        }
+    }
 
 
 }

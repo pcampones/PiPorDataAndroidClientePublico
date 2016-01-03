@@ -12,25 +12,25 @@
     <string name="anoFimHint2">Data Fim</string>
     <string-array name="SpinnerList">
         <item>Selecione uma opção...</item>
-        <item>MediaCustoFuncionario</item>
-        <item>NumeroFuncionarios</item>
-        <item>NumeroFuncionariosCategoria</item>
-        <item>PercentagemMedicamentos</item>
-        <item>PercentagemPessoal</item>
-        <item>NumeroAcoesCategoria</item>
-        <item>PercentagemAcoesCategoria</item>
-        <item>MediaCamasHospitais</item>
-        <item>RacioFuncionariosEstabelecimentos</item>
+        <item>Custo Médio de um Funcionário</item>
+        <item>Número de Funcionários</item>
+        <item>Número de Funcionários Por Categoria</item>
+        <item>Percentagem dos Custos com Medicamentos</item>
+        <item>Percentagem dos Custos com Pessoal</item>
+        <item>Número de Consultas, Internamentos e Urgências em Hospitais</item>
+        <item>Percentagem de Consultas, Internamentos e Urgências em Centros de Saúde</item>
+        <item>Média do Número de Camas Disponíveis nos Hospitais</item>
+        <item>Rácio entre o número de Funcionários e número de Estabelecimentos</item>
     </string-array>
     <string-array name="SpinnerCategorias">
-        <item>Medicos</item>
+        <item>Médicos</item>
         <item>Enfermeiros</item>
-        <item>PessoalDeEnfermagem</item>
-        <item>TecnicosDiagnosticoTerapeutica</item>
+        <item>Pessoal de Enfermagem</item>
+        <item>Técnicos de Diagnostico Terapeutica</item>
     </string-array>
     <string-array name="SpinnerAcoes">
     <item>Consultas</item>
     <item>Internamentos</item>
-    <item>Urgencias</item>
+    <item>Urgências</item>
 </string-array>
 </resources>
