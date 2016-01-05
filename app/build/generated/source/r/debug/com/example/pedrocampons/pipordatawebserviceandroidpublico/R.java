@@ -1622,6 +1622,7 @@ containing a value of this type.
         public static final int beginning=0x7f0d0018;
         public static final int button=0x7f0d0052;
         public static final int button2=0x7f0d0053;
+        public static final int button3=0x7f0d0068;
         public static final int buttonPanel=0x7f0d002b;
         public static final int cancel_action=0x7f0d005b;
         public static final int checkbox=0x7f0d0039;
@@ -1645,6 +1646,7 @@ containing a value of this type.
         public static final int icon=0x7f0d0029;
         public static final int ifRoom=0x7f0d001d;
         public static final int image=0x7f0d0026;
+        public static final int imagePorData=0x7f0d0067;
         public static final int info=0x7f0d0065;
         public static final int line1=0x7f0d005f;
         public static final int line3=0x7f0d0063;
@@ -1748,13 +1750,15 @@ containing a value of this type.
         public static final int notification_template_media=0x7f040020;
         public static final int notification_template_part_chronometer=0x7f040021;
         public static final int notification_template_part_time=0x7f040022;
-        public static final int select_dialog_item_material=0x7f040023;
-        public static final int select_dialog_multichoice_material=0x7f040024;
-        public static final int select_dialog_singlechoice_material=0x7f040025;
-        public static final int support_simple_spinner_dropdown_item=0x7f040026;
+        public static final int pordata_layout=0x7f040023;
+        public static final int select_dialog_item_material=0x7f040024;
+        public static final int select_dialog_multichoice_material=0x7f040025;
+        public static final int select_dialog_singlechoice_material=0x7f040026;
+        public static final int support_simple_spinner_dropdown_item=0x7f040027;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
+        public static final int pordata=0x7f030001;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f060000;

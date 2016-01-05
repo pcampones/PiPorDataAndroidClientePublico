@@ -24,11 +24,13 @@
             android:layout_weight="0.06" />
 
         <EditText
-            android:layout_width="340dp"
-            android:layout_height="23dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
             android:id="@+id/passEditText"
-            android:hint="@string/passwordHint"
-            android:layout_weight="0.22" />
+            android:layout_weight="0.06"
+            android:hint="@string/passwordHint" />
 
         <Button
             android:layout_width="wrap_content"

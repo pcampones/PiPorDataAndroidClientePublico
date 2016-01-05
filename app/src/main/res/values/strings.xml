@@ -29,8 +29,8 @@
         <item>Tecnicos de Diagnostico Terapeutica</item>
     </string-array>
     <string-array name="SpinnerAcoes">
-    <item>Consultas</item>
-    <item>Internamentos</item>
-    <item>Urgencias</item>
-</string-array>
+        <item>Consultas</item>
+        <item>Internamentos</item>
+        <item>Urgencias</item>
+    </string-array>
 </resources>
