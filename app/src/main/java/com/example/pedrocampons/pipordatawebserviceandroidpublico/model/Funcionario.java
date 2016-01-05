@@ -23,31 +23,7 @@ public class Funcionario implements Serializable{
     }
 
 
-    /*public Funcionario(int ano, double valor)
-    {
 
-        this.ano = ano;
-        this.valor = valor;
-    }*/
-   /* public String mediaFunc(){
-        return "Ano: " + ano + '\'' +
-                ", Média: '" + valor + '\'';
-    }
-
-    public String funcionarios(){
-        return "Ano: " + ano + '\'' +
-                ", Número de funcionários: '" + soma1 + '\'';
-    }
-
-    public String percPessoal(){
-        return "Ano: " + ano + '\'' +
-                ", Percentagem de pessoal: '" + valor + " %" + '\'';
-    }
-
-    public String racioFuncionarios(){
-        return "Ano: " + ano + '\'' +
-                ", Percentagem de funcionários: '" + valor + " %" + '\'';
-    }*/
 
     public int getAno() {
         return ano;
@@ -73,7 +49,7 @@ public class Funcionario implements Serializable{
     public String toString() {
         String res= null;
         if(percenPessoal == 0 && numFunc ==0 && percenFun == 0){
-            res= "Ano : " + ano +  "\nMédia :" + media;
+            res= "Ano : " + ano +  "\nMédia :" + media + " €";
         }
         else if(percenPessoal == 0 && percenFun ==0 && media == 0)
         {

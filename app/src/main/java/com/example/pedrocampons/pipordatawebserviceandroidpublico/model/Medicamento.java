@@ -27,7 +27,6 @@ public class Medicamento {
     @Override
     public String toString() {
         return "Ano : " + ano +
-                "\nPercentagem : " + valor +
-                " %";
+                "\nPercentagem : " + valor + " %";
     }
 }

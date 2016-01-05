@@ -190,93 +190,99 @@ public class MainActivity extends AppCompatActivity {
 
   public void button_MetodosonClick(View view) {
 
-        int a = 0 ;
+      int a = 0;
 
-        String text = metodos.getSelectedItem().toString();
+      String text = metodos.getSelectedItem().toString();
 
-        a = verificaDatas(dataInicio.getText().toString(),dataFim.getText().toString());
-
-        if (a == 1) {
-
-            Toast.makeText(this, "A executar...", Toast.LENGTH_SHORT).show();
-            switch (text) {
-
-                case "Selecione uma opção...":
-                    Toast.makeText(this, "Selecione uma opção!", Toast.LENGTH_LONG).show();
-                    break;
-
-                case "Custo Médio de um Funcionário":
-                    GetMediaFunc getMediaFunc = new GetMediaFunc();
-                    getMediaFunc.execute(
-                            dataInicio.getText().toString(),
-                            dataFim.getText().toString());
-                    break;
-
-                case "Número de Funcionários":
-                    GetNumFunc getNumFunc = new GetNumFunc();
-                    getNumFunc.execute(
-                            dataInicio.getText().toString(),
-                            dataFim.getText().toString());
-                    break;
-
-                case "Número de Funcionários Por Categoria":
-                    GetNumFuncCategoria getNumFuncCat = new GetNumFuncCategoria();
-                    getNumFuncCat.execute(
-                            dataInicio.getText().toString(),
-                            dataFim.getText().toString(),
-                            cat.getSelectedItem().toString());
-                    break;
+      if (dataInicio.getText().toString() != null && dataFim.getText().toString() != null) {
 
 
-                case "Percentagem dos Custos com Medicamentos":
-                    GetPercentagemMedicamentos getPercentagemMed = new GetPercentagemMedicamentos();
-                    getPercentagemMed.execute(
-                            dataInicio.getText().toString(),
-                            dataFim.getText().toString());
-                    break;
+          a = verificaDatas(dataInicio.getText().toString(), dataFim.getText().toString());
 
-                case "Percentagem dos Custos com Pessoal":
-                    GetPercentagemPessoal getPercentagemPessoal = new GetPercentagemPessoal();
-                    getPercentagemPessoal.execute(
-                            dataInicio.getText().toString(),
-                            dataFim.getText().toString());
-                    break;
+          if (a == 1) {
+
+              Toast.makeText(this, "A executar...", Toast.LENGTH_SHORT).show();
+              switch (text) {
+
+                  case "Selecione uma opção...":
+                      Toast.makeText(this, "Selecione uma opção!", Toast.LENGTH_LONG).show();
+                      break;
+
+                  case "Custo Médio de um Funcionário":
+                      GetMediaFunc getMediaFunc = new GetMediaFunc();
+                      getMediaFunc.execute(
+                              dataInicio.getText().toString(),
+                              dataFim.getText().toString());
+                      break;
+
+                  case "Número de Funcionários":
+                      GetNumFunc getNumFunc = new GetNumFunc();
+                      getNumFunc.execute(
+                              dataInicio.getText().toString(),
+                              dataFim.getText().toString());
+                      break;
+
+                  case "Número de Funcionários Por Categoria":
+                      GetNumFuncCategoria getNumFuncCat = new GetNumFuncCategoria();
+                      getNumFuncCat.execute(
+                              dataInicio.getText().toString(),
+                              dataFim.getText().toString(),
+                              cat.getSelectedItem().toString());
+                      break;
 
 
-                case "Número de Consultas, Internamentos e Urgências em Hospitais":
-                    GetAcoesCategoria getAcoesCategoria = new GetAcoesCategoria();
-                    getAcoesCategoria.execute(
-                            dataInicio.getText().toString(),
-                            dataFim.getText().toString(),
-                            acao.getSelectedItem().toString());
-                    break;
+                  case "Percentagem dos Custos com Medicamentos":
+                      GetPercentagemMedicamentos getPercentagemMed = new GetPercentagemMedicamentos();
+                      getPercentagemMed.execute(
+                              dataInicio.getText().toString(),
+                              dataFim.getText().toString());
+                      break;
 
-                case "Percentagem de Consultas, Internamentos e Urgências em Centros de Saúde":
-                    GetPerAcoesCat getPerAcoesCat = new GetPerAcoesCat();
-                    getPerAcoesCat.execute(
-                            dataInicio.getText().toString(),
-                            dataFim.getText().toString(),
-                            acao.getSelectedItem().toString());
-                    break;
+                  case "Percentagem dos Custos com Pessoal":
+                      GetPercentagemPessoal getPercentagemPessoal = new GetPercentagemPessoal();
+                      getPercentagemPessoal.execute(
+                              dataInicio.getText().toString(),
+                              dataFim.getText().toString());
+                      break;
 
-                case "Média do Número de Camas Disponíveis nos Hospitais":
-                    GetMediaCamas getMediaCamas = new GetMediaCamas();
-                    getMediaCamas.execute(
-                            dataInicio.getText().toString(),
-                            dataFim.getText().toString());
-                    break;
 
-                case "Rácio entre o número de Funcionários e número de Estabelecimentos":
-                    GetRacioFuncionarios getRacioFunc = new GetRacioFuncionarios();
-                    getRacioFunc.execute(
-                            dataInicio.getText().toString(),
-                            dataFim.getText().toString());
-                    break;
-            }
-        } else {
-            Toast.makeText(this,"Data de Inicio tem que ser menor que a Data de Fim!",Toast.LENGTH_LONG).show();
-        }
-    }
+                  case "Número de Consultas, Internamentos e Urgências em Hospitais":
+                      GetAcoesCategoria getAcoesCategoria = new GetAcoesCategoria();
+                      getAcoesCategoria.execute(
+                              dataInicio.getText().toString(),
+                              dataFim.getText().toString(),
+                              acao.getSelectedItem().toString());
+                      break;
+
+                  case "Percentagem de Consultas, Internamentos e Urgências em Centros de Saúde":
+                      GetPerAcoesCat getPerAcoesCat = new GetPerAcoesCat();
+                      getPerAcoesCat.execute(
+                              dataInicio.getText().toString(),
+                              dataFim.getText().toString(),
+                              acao.getSelectedItem().toString());
+                      break;
+
+                  case "Média do Número de Camas Disponíveis nos Hospitais":
+                      GetMediaCamas getMediaCamas = new GetMediaCamas();
+                      getMediaCamas.execute(
+                              dataInicio.getText().toString(),
+                              dataFim.getText().toString());
+                      break;
+
+                  case "Rácio entre o número de Funcionários e número de Estabelecimentos":
+                      GetRacioFuncionarios getRacioFunc = new GetRacioFuncionarios();
+                      getRacioFunc.execute(
+                              dataInicio.getText().toString(),
+                              dataFim.getText().toString());
+                      break;
+              }
+          } else {
+              Toast.makeText(this, "Data de Inicio tem que ser menor que a Data de Fim!", Toast.LENGTH_LONG).show();
+          }
+      }else{
+          Toast.makeText(this, "Insira uma data em cada espaço!", Toast.LENGTH_LONG).show();
+      }
+  }
     private String readStream(InputStream is) {
         StringBuilder sb = new StringBuilder(512);
         try {
