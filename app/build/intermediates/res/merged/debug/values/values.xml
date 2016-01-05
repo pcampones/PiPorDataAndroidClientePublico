@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="SpinnerAcoes">
-    <item>Consultas</item>
-    <item>Internamentos</item>
-    <item>Urgencias</item>
-</string-array>
+        <item>Consultas</item>
+        <item>Internamentos</item>
+        <item>Urgencias</item>
+    </string-array>
     <string-array name="SpinnerCategorias">
         <item>Medicos</item>
         <item>Enfermeiros</item>

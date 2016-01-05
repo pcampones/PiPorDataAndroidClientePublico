@@ -1750,7 +1750,7 @@ containing a value of this type.
         public static final int notification_template_media=0x7f040020;
         public static final int notification_template_part_chronometer=0x7f040021;
         public static final int notification_template_part_time=0x7f040022;
-        public static final int pordata_layout=0x7f040023;
+        public static final int por_data_layout=0x7f040023;
         public static final int select_dialog_item_material=0x7f040024;
         public static final int select_dialog_multichoice_material=0x7f040025;
         public static final int select_dialog_singlechoice_material=0x7f040026;

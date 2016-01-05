@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Proprietario\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Proprietario\\PiPorDataAndroidClientePublico\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Proprietario\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\pordata.png",
-        "source": "C:\\Users\\Proprietario\\PiPorDataAndroidClientePublico\\app\\src\\main\\res\\mipmap-mdpi\\pordata.png"
+        "merged": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\pordata.png",
+        "source": "C:\\MyProjectsAndroid\\PiPorDataAndroidClientePublico\\app\\src\\main\\res\\mipmap-mdpi\\pordata.png"
     }
 ]
