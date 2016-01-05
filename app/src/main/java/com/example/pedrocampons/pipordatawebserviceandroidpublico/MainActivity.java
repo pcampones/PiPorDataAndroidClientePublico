@@ -194,9 +194,11 @@ public class MainActivity extends AppCompatActivity {
 
       String text = metodos.getSelectedItem().toString();
 
-      if (dataInicio.getText().toString() != null && dataFim.getText().toString() != null) {
+      if (dataInicio.getText().toString().trim().equals("") && dataFim.getText().toString().trim().equals("")) {
 
+          Toast.makeText(this, "Insira uma data em cada espaço!", Toast.LENGTH_LONG).show();
 
+      } else {
           a = verificaDatas(dataInicio.getText().toString(), dataFim.getText().toString());
 
           if (a == 1) {
@@ -279,8 +281,7 @@ public class MainActivity extends AppCompatActivity {
           } else {
               Toast.makeText(this, "Data de Inicio tem que ser menor que a Data de Fim!", Toast.LENGTH_LONG).show();
           }
-      }else{
-          Toast.makeText(this, "Insira uma data em cada espaço!", Toast.LENGTH_LONG).show();
+
       }
   }
     private String readStream(InputStream is) {
@@ -760,7 +761,7 @@ public class MainActivity extends AppCompatActivity {
                 //token = preferences.getString("token", null);
 
                 String url = URL_WEBSERVICE
-                        + "/Rest/acoesCategoria?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
+                        + "/Rest/acoesCategoria?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2].replace(" ", "") + "&token=" + tokenS;
 
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 
@@ -845,7 +846,8 @@ public class MainActivity extends AppCompatActivity {
                 //token = preferences.getString("token", null);
 
                 String url = URL_WEBSERVICE
-                        + "/Rest/percentagemAcoes?dataInicio=" + params[0] + "&dataFim=" + params[1] + "&categoria=" + params[2] + "&token=" + tokenS;
+                        + "/Rest/percentagemAcoes?dataInicio=" + params[0] + "&dataFim=" + params[1] +
+                        "&categoria=" + params[2].replace(" ", "") + "&token=" + tokenS;
 
                 HttpURLConnection httpURLConnection = setupHttpURLConnection(url, "GET");
 

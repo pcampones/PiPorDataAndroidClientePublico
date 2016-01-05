@@ -10,6 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f7cb8e9-e47f-4b17-82cc-99fc4f9a653a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
@@ -18,7 +20,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Medicamento.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Medicamento.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v11.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v11.json" />
@@ -51,6 +52,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-xxhdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-xxxhdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-af.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-af.json" />
@@ -186,11 +188,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="196" column="89" selection-start-line="196" selection-start-column="89" selection-end-line="196" selection-end-column="89" />
+            <state vertical-scroll-proportion="0.5134168">
+              <caret line="839" column="18" selection-start-line="839" selection-start-column="18" selection-end-line="839" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#onItemSelected#0;class#3394:8132" expanded="false" />
@@ -198,55 +200,13 @@
                 <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+                <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Funcionario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cama.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Cama.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Acao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Acao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Medicamento.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Medicamento.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.745">
-              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-              <folding>
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#377#378#0" expanded="true" />
+                <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -255,8 +215,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.037037">
-              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+            <state vertical-scroll-proportion="-10.888889">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -1660,9 +1620,9 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
-                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.1.1/appcompat-v7-23.1.1.aar" />
-                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.1.1/support-v4-23.1.1.aar" />
-                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar" />
+                            <option value="C:/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.1.1/appcompat-v7-23.1.1.aar" />
+                            <option value="C:/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.1.1/support-v4-23.1.1.aar" />
+                            <option value="C:/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/app" />
@@ -1813,10 +1773,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Cama.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Acao.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Medicamento.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -1837,7 +1797,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1862,10 +1822,9 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1886,6 +1845,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PiPorDataWebServiceAndroidPublico" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1942,15 +1923,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PiPorDataWebServiceAndroidPublico" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4df13ad74e2b4f5f" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_23_x86" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
@@ -2207,7 +2199,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.49394855" order="8" side_tool="false" content_ui="tabs" />
@@ -2220,6 +2212,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290469" sideWeight="0.45" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63884157" sideWeight="0.7950076" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.4969743" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4599659" sideWeight="0.5204236" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2230,16 +2223,15 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290469" sideWeight="0.55" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37649062" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37649062" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4599659" sideWeight="0.5204236" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2267,23 +2259,56 @@
     <MESSAGE value="toStrings resolvidos" />
     <MESSAGE value="toStrings resolvidos 2.0" />
     <MESSAGE value="toStrings resolvidos 2.0.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="toStrings resolvidos 2.0.0" />
+    <MESSAGE value="toStrings resolvidos 2.0.000" />
+    <option name="LAST_COMMIT_MESSAGE" value="toStrings resolvidos 2.0.000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java</url>
-          <line>842</line>
+          <line>847</line>
           <properties />
-          <option name="timeStamp" value="80" />
+          <option name="timeStamp" value="84" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="82" />
+      <option name="time" value="85" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Cama.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Acao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Medicamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2295,12 +2320,13 @@
             <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2324,12 +2350,13 @@
             <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2351,14 +2378,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java">
@@ -2372,12 +2399,13 @@
             <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2398,14 +2426,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java">
@@ -2419,12 +2447,13 @@
             <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2437,14 +2466,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java">
@@ -2458,12 +2487,13 @@
             <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2507,14 +2537,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java">
@@ -2528,12 +2558,13 @@
             <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2549,25 +2580,26 @@
             <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/LoginActivity.java">
@@ -2588,12 +2620,13 @@
             <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2616,12 +2649,13 @@
             <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
             <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2683,14 +2717,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
@@ -2708,56 +2742,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.037037">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding />
-        </state>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Medicamento.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="196" column="89" selection-start-line="196" selection-start-column="89" selection-end-line="196" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#onItemSelected#0;class#3394:8132" expanded="false" />
-            <element signature="method#readStream#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetPerAcoesCat#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Cama.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.72629696">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -2770,13 +2767,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Medicamento.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Cama.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.745">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.3309481">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sdk/sources/android-23/org/json/JSONArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4955277">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Android/sdk/sources/android-23/android/os/AsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33273703">
+          <caret line="358" column="30" selection-start-line="358" selection-start-column="30" selection-end-line="358" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/model/Funcionario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7763864">
+          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.888889">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pedrocampons/pipordatawebserviceandroidpublico/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5134168">
+          <caret line="839" column="18" selection-start-line="839" selection-start-column="18" selection-end-line="839" selection-end-column="18" />
           <folding>
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#onItemSelected#0;class#3394:8132" expanded="false" />
+            <element signature="method#readStream#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setupHttpURLConnection#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetMediaFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFunc#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetNumFuncCategoria#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetPercentagemMedicamentos#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetPercentagemPessoal#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetAcoesCategoria#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetMediaCamas#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetRacioFuncionarios#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#verificaDatas#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

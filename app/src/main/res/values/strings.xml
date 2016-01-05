@@ -23,14 +23,14 @@
         <item>Rácio entre o número de Funcionários e número de Estabelecimentos</item>
     </string-array>
     <string-array name="SpinnerCategorias">
-        <item>Médicos</item>
+        <item>Medicos</item>
         <item>Enfermeiros</item>
         <item>Pessoal de Enfermagem</item>
-        <item>Técnicos de Diagnostico Terapeutica</item>
+        <item>Tecnicos de Diagnostico Terapeutica</item>
     </string-array>
     <string-array name="SpinnerAcoes">
     <item>Consultas</item>
     <item>Internamentos</item>
-    <item>Urgências</item>
+    <item>Urgencias</item>
 </string-array>
 </resources>

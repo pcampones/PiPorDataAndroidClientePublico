@@ -49,12 +49,12 @@ public class Funcionario implements Serializable{
     public String toString() {
         String res= null;
         if(percenPessoal == 0 && numFunc ==0 && percenFun == 0){
-            res= "Ano : " + ano +  "\nMédia :" + media + " €";
+            res= "Ano : " + ano +  "\nMédia : " + media + " €";
         }
         else if(percenPessoal == 0 && percenFun ==0 && media == 0)
         {
             res = "Ano : " + ano +
-                    " \nNúmero de Funcionários : " + numFunc  ;
+                    " \nNúmero de Funcionários : " + numFunc + " "  ;
         }else if(numFunc == 0 && percenFun ==0 && media == 0){
             res = "Ano : " + ano +
                     " \nPercentagem de Pessoal : " + percenPessoal + " %" ;
