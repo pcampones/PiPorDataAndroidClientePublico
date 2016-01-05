@@ -31,7 +31,7 @@ public class Cama {
     public String toString() {
         return
                 "Ano : " + ano +
-                "\nMédia : " + valor ;
+                "\nMédia : " + valor + "de Camas " ;
     }
 
 
