@@ -111,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
 
             //Guardar e mostrar o token
 
-            Toast.makeText(LoginActivity.this, s, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(LoginActivity.this, s, Toast.LENGTH_SHORT).show();
 
             SharedPreferences preferences = LoginActivity.this.getSharedPreferences("token",Context.MODE_PRIVATE);
             SharedPreferences.Editor edit = preferences.edit();
