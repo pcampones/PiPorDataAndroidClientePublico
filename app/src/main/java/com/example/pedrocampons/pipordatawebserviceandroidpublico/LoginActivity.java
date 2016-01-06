@@ -119,7 +119,7 @@ public class LoginActivity extends AppCompatActivity {
             edit.putString("token", s.replace("\"", ""));
             edit.commit();
             if (!s.startsWith("Erro:")) {
-                Toast.makeText(LoginActivity.this, "Login Succecfull", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Login feito com sucesso!", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
               //  startActivityForResult(intent, 1);
@@ -129,7 +129,7 @@ public class LoginActivity extends AppCompatActivity {
 
             } else {
 
-                Toast.makeText(LoginActivity.this, "Error login. Username and Password are incorrect!! " + s, Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Erro no login. Username e Password incorretos!! " + s, Toast.LENGTH_SHORT).show();
 
             }
 
